@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TVOYA - Beauty Institute</title>
+        <link href="/css/style.css" rel="stylesheet" type="text/css"/>
+        <link rel="icon" href="/favicon/favicon.ico" sizes="32x32">
+        <link rel="icon" href="/favicon/icon.svg" type="image/svg+xml">
+        <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png"><!-- 180×180 -->
+        <link rel="manifest" href="/favicon/site.webmanifest">
+
+        <script type="text/javascript">
+            !function(o, c) {
+                var n = c.documentElement
+                  , t = " mod-";
+                n.className += t + "js",
+                ("ontouchstart"in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
+            }(window, document);
+        </script>
+    </head>
+    <body>
+    <header class="header">
+            <div class="container">
+                <div class="header-content-wrp">
+                    <a href="#" class="header-logo">
+                        <img src="/images/logo_full_gold.svg" loading="lazy" width="210" height="62" alt="" class="header-logo-img"/>
+                    </a>
+                    <div class="header_menu">
+                        <nav class="main_nav">
+                            <ul role="list" class="nav_list">
+                                <li><a href="#" class="nav_link active">Home</a></li>
+                                <li><a href="#" class="nav_link">Services</a></li>
+                                <li><a href="#" class="nav_link">Prices</a></li>
+                                <li><a href="#" class="nav_link">Contact</a></li>
+                            </ul>
+                        </nav>
+                        <div class="dropdown lang-switcher">
+                            <button class="dropdown_toggle caret" type="button">EN</button>
+                            <div class="dropdown_body lang_list">
+                                <nav>
+                                    <a href="#" class="lang_item active">English</a>
+                                    <a href="#" class="lang_item">Deutsch</a>
+                                    <a href="#" class="lang_item">Русский</a>
+                                </nav>
+                            </div>
+                        </div>
+                        <div data-hover="false" data-delay="350" class="burger-menu dropdown">
+                            <div class="menu-toggle dropdown_toggle">
+                                <div class="burger_menu">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="dropdown_body full_menu">
+                                <nav>
+                                    <ul role="list" class="full_menu_list">
+                                        <li><a href="#" class="menu_link active">Home</a></li>
+                                        <li><a href="#" class="menu_link">Services</a>
+                                            <ul role="list" class="submenu">
+                                                <li><a href="#" class="submenu_link">Gesichtsbehandlungen</a></li>
+                                                <li><a href="#" class="submenu_link">Dermadrop TDA System</a></li>
+                                                <li><a href="#" class="submenu_link">Endospheres Therapy</a></li>
+                                                <li><a href="#" class="submenu_link">Biologique Recherche</a></li>
+                                                <li><a href="#" class="submenu_link">ZO Obagi</a></li>
+                                                <li><a href="#" class="submenu_link">DMK</a></li>
+                                            </ul></li>
+                                        <li><a href="#" class="menu_link">Blog</a></li>
+                                        <li><a href="#" class="menu_link">News</a></li>
+                                        <li><a href="#" class="menu_link">About Us</a>
+                                            <ul role="list" class="submenu">
+                                                <li><a href="#" class="submenu_link">Our Team</a></li>
+                                                <li><a href="#" class="submenu_link">Founder</a></li>
+                                            </ul></li>
+                                        <li><a href="#" class="menu_link">Documents</a>
+                                            <ul role="list" class="submenu">
+                                                <li><a href="#" class="submenu_link">Impressum</a></li>
+                                                <li><a href="#" class="submenu_link">Certificates</a></li>
+                                            </ul></li>
+                                        <li><a href="#" class="menu_link">Prices</a></li>
+                                        <li><a href="#" class="menu_link">Portfolio</a></li>
+                                        <li><a href="#" class="menu_link">Contact</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript">
+                const el = document.querySelector("header")
+                const observer = new IntersectionObserver( 
+                ([e]) => e.target.classList.toggle("is-pinned", e.intersectionRatio < 1),
+                { threshold: [1] }
+                );
+
+                observer.observe(el);
+            </script>
+    </header>
+    <section class="hero">
+        <div class="container">
+            <div class="d-flex hero-content-wrp">
+                <div class="d-flex flex-column hero-text-wrp">
+                    <h1 class="h1">Elevate Your Beauty with Aesthetic Cosmetology Solutions</h1>
+                    <p class="subtitle">Addressing skin concerns head-on, TVOYA Beauty Salon offers personalized solutions that rejuvenate your skin and restore your confidence.</p>
+                    <button type="button" class="btn btn-gold make-reservation">
+                        Make a Reservation <span class="icon icon-calendar"></span>
+                    </button>
+                </div>
+                <div class="hero-img-wrp">
+                    <div class="bg-decor">
+                        <div class="bg-spot"></div>
+                        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="32" viewBox="0 0 647 691" fill="none">
+                            <path d="M594.608 498.143C498.711 668.596 299.466 738.224 149.648 653.938C-0.169345 569.651 -44.1013 363.212 51.795 192.759C147.691 22.3054 346.937 -47.3226 496.754 36.964C646.572 121.251 690.504 327.689 594.608 498.143Z" stroke="currentColor" stroke-width="1.5" class="hero-img-path"></path>
+                        </svg> -->
+                        <svg class="hero-img-outline" width="647" height="691" viewBox="0 0 647 691" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M594.608 498.143C498.711 668.596 299.466 738.224 149.648 653.938C-0.169345 569.651 -44.1013 363.212 51.795 192.759C147.691 22.3054 346.937 -47.3226 496.754 36.964C646.572 121.251 690.504 327.689 594.608 498.143Z" stroke="#E3D1BA" stroke-width="1.5" class="hero-img-path" />
+                        </svg>
+                        <div class="star-decor style-outline">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" viewBox="0 0 60 60" fill="none">
+                                <path d="M0.690308 29.5719C15.1612 29.5719 30.2357 44.6464 30.2357 59.1173C30.2357 44.6464 45.3102 29.5719 59.7811 29.5719C45.3102 29.5719 30.2357 14.4974 30.2357 0.0264893C30.2357 14.4974 15.1612 29.5719 0.690308 29.5719Z" stroke="currentColor"></path>
+                            </svg>
+                        </div>
+                        <div class="star-decor item-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" viewBox="0 0 42 41" fill="none">
+                                <path d="M0.781616 20.4794C11.9621 20.4794 21.0257 29.5429 21.0257 40.7234C21.0257 29.5429 30.0892 20.4794 41.2697 20.4794C30.0892 20.4794 21.0257 11.4158 21.0257 0.235306C21.0257 11.4158 11.9621 20.4794 0.781616 20.4794Z" fill="currentColor"></path>
+                            </svg>
+                        </div>
+                        <div class="star-decor item-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" viewBox="0 0 42 41" fill="none">
+                                <path d="M0.781616 20.4794C11.9621 20.4794 21.0257 29.5429 21.0257 40.7234C21.0257 29.5429 30.0892 20.4794 41.2697 20.4794C30.0892 20.4794 21.0257 11.4158 21.0257 0.235306C21.0257 11.4158 11.9621 20.4794 0.781616 20.4794Z" fill="currentColor"></path>
+                            </svg>
+                        </div>
+                        <div class="star-decor item-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" viewBox="0 0 42 41" fill="none">
+                                <path d="M0.781616 20.4794C11.9621 20.4794 21.0257 29.5429 21.0257 40.7234C21.0257 29.5429 30.0892 20.4794 41.2697 20.4794C30.0892 20.4794 21.0257 11.4158 21.0257 0.235306C21.0257 11.4158 11.9621 20.4794 0.781616 20.4794Z" fill="currentColor"></path>
+                            </svg>
+                        </div>
+                        <div class="star-decor style-outline item-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" viewBox="0 0 60 60" fill="none">
+                                <path d="M0.690308 29.5719C15.1612 29.5719 30.2357 44.6464 30.2357 59.1173C30.2357 44.6464 45.3102 29.5719 59.7811 29.5719C45.3102 29.5719 30.2357 14.4974 30.2357 0.0264893C30.2357 14.4974 15.1612 29.5719 0.690308 29.5719Z" stroke="currentColor"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <img src="/images/hero_img_o.jpg" width="660" alt="" style="clip-path:url(#mask1)" loading="lazy" />
+                    <svg xmlns="http://www.w3.org/2000/svg" width="0px" height="0px" viewBox="0 0 660 645" fill="none" class="clip-mask">
+                        <defs>
+                            <clipPath id="mask1" clipPathUnits="objectBoundingBox">
+                                <path d="M0.9137454545454545,0.8168728682170543c-0.1581530303030303,0.22617364341085272,-0.4688833333333334,0.22363410852713178,-0.7149212121212122,0.09656899224806201c-0.24603787878787878,-0.12706511627906975,-0.25349696969696967,-0.4345596899224806,-0.0787,-0.6310868217054263c0.17479545454545453,-0.19652713178294576,0.5144742424242424,-0.357075968992248,0.7228060606060607,-0.24588217054263564c0.20833333333333334,0.1111937984496124,0.1851378787878788,0.6169100775193798,0.07081515151515151,0.7804z" fill="#E7E7E7"></path>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="ticker-container">
+            <div class="phrase-container">
+                <div class="d-flex ticker-item">
+                    <div>You <span class="highlight">deserve</span> the royal treatment</div>
+                    <div class="star-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="42" viewBox="0 0 60 61" fill="none">
+                            <path d="M29.373 1.05701C29.4611 0.314329 30.5389 0.314329 30.627 1.05701L31.925 11.9965C32.9564 20.6896 39.8104 27.5436 48.5035 28.575L59.443 29.873C60.1857 29.9611 60.1857 31.0389 59.443 31.127L48.5035 32.425C39.8104 33.4564 32.9564 40.3104 31.925 49.0035L30.627 59.943C30.5389 60.6857 29.4611 60.6857 29.373 59.943L28.075 49.0035C27.0436 40.3104 20.1896 33.4564 11.4965 32.425L0.557014 31.127C-0.185671 31.0389 -0.185671 29.9611 0.557013 29.873L11.4965 28.575C20.1896 27.5436 27.0436 20.6896 28.075 11.9965L29.373 1.05701Z" fill="currentColor"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="d-flex ticker-item">
+                    <div>You <span class="highlight">deserve</span> the royal treatment</div>
+                    <div class="star-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="42" viewBox="0 0 60 61" fill="none">
+                            <path d="M29.373 1.05701C29.4611 0.314329 30.5389 0.314329 30.627 1.05701L31.925 11.9965C32.9564 20.6896 39.8104 27.5436 48.5035 28.575L59.443 29.873C60.1857 29.9611 60.1857 31.0389 59.443 31.127L48.5035 32.425C39.8104 33.4564 32.9564 40.3104 31.925 49.0035L30.627 59.943C30.5389 60.6857 29.4611 60.6857 29.373 59.943L28.075 49.0035C27.0436 40.3104 20.1896 33.4564 11.4965 32.425L0.557014 31.127C-0.185671 31.0389 -0.185671 29.9611 0.557013 29.873L11.4965 28.575C20.1896 27.5436 27.0436 20.6896 28.075 11.9965L29.373 1.05701Z" fill="currentColor"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about-us-module">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-title-wrp">
+                    <div class="section-title">About Us</div>
+                </div>
+            </div>
+            <div class="d-flex gap-60">
+                <div class="img-slider col-5">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" style="background-image: url('/images/about_img_1_o.jpg');" data-caption="State-of-the-art Equipment"></div>
+                            <div class="swiper-slide" style="background-image: url('/images/about_img_2_o.jpg');" data-caption="Technological Innovations"></div>
+                            <div class="swiper-slide" style="background-image: url('/images/about_img_3_o.jpg');" data-caption="Training, Congresses, Seminars"></div>
+                            <div class="swiper-slide" style="background-image: url('/images/about_img_4_o.jpg');" data-caption="Professionals in the Team"></div>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="0px" height="0px" viewBox="0 0 331 311" fill="none" class="clip-mask">
+                            <defs>
+                                <clipPath id="mask2" clipPathUnits="objectBoundingBox">
+                                    <path d="M0.9271903323262839,0.30775691318327975c0.14207552870090634,0.2538681672025724,0.06612688821752266,0.5457556270096463,-0.16964048338368581,0.6519485530546624c-0.23576737160120848,0.10618971061093248,-0.5420694864048339,-0.01352411575562701,-0.6841480362537764,-0.2673922829581994c-0.14207552870090634,-0.2538681672025724,-0.06612688821752266,-0.5457556270096463,0.16964048338368581,-0.6519485530546624c0.23576737160120848,-0.10618971061093248,0.5420694864048339,0.01352411575562701,0.6841480362537764,0.2673922829581994z" fill="white"></path>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="slider-control d-flex">
+                        <div class="slider-buttons">
+                            <button role="button" class="slider-btn prev">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#222" stroke-linecap="round" stroke-width="2" d="M18.333 10H1.667m16.666 0-6.908-7.5m6.908 7.5-6.908 7.5"/></svg>
+                            </button>
+                            <button role="button" class="slider-btn next">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#222" stroke-linecap="round" stroke-width="2" d="M18.333 10H1.667m16.666 0-6.908-7.5m6.908 7.5-6.908 7.5"/></svg>
+                            </button>
+                        </div>
+                        <div class="slide-title">
+                            <span>State-of-the-art Equipment</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex flex-column gap-20">
+                    <h2 class="h2">Say goodbye to skin worries and hello to radiant beauty</h2>
+                    <div class="text-block">
+                        <p>At TVOYA Beauty Salon, we address skin concerns head-on with personalized solutions, rejuvenating your skin and restoring confidence.</p>
+                        <p>People trust our clinic because of Valentina Tuz &#x27;s exceptional expertise and dedication to delivering remarkable results. Our clients find comfort and confidence in the hands of a renowned expert, making us their top choice for transformative beauty solutions.</p>
+                    </div>
+                    <div class="benefits_toggle">
+                        <div class="toggle_item active" data-index="0">
+                            <div class="slide-thumb" style="background-image: url('/images/about_img_1_o.jpg');"></div>
+                            <div class="benefit_text">State-of-the-art Equipment</div>
+                        </div>
+                        <div class="toggle_item" data-index="1">
+                            <div class="slide-thumb" style="background-image: url('/images/about_img_2_o.jpg');"></div>
+                            <div class="benefit_text">Technological Innovations</div>
+                        </div>
+                        <div class="toggle_item" data-index="2">
+                            <div class="slide-thumb" style="background-image: url('/images/about_img_3_o.jpg');"></div>
+                            <div class="benefit_text">Training, Congresses, Seminars</div>
+                        </div>
+                        <div class="toggle_item" data-index="3">
+                            <div class="slide-thumb" style="background-image: url('/images/about_img_4_o.jpg');"></div>
+                            <div class="benefit_text">Professionals in the Team</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="services-module">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-title-wrp">
+                    <div class="section-title">Services</div>
+                </div>
+            </div>
+            <div class="d-flex gap-60 align-items-center">
+                <div class="col">
+                    <div class="accordion" data-mode="always-open">
+                        <div class="accordion-item show" data-image="images/facial-scrub-o.jpg" data-price="from 150 €">
+                            <div class="accordion-toggle">
+                                <h3>Facial treatments</h3>
+                                <span class="icon icon-chevron"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1.875 6.194 8.125 7.5 8.125-7.5"/></svg></span>
+                            </div>
+                            <div class="accordion-collapse collapse show">
+                                <div class="accordion-body">
+                                    <p>Experience the ultimate in skincare with our personalized facial treatments. Each session is tailored to your skin type and concerns, ensuring a glowing and healthy complexion.</p>
+                                    <a href="#" class="btn btn-sm btn-beige-2"><span class="btn-text">read more</span><span class="btn-icon icon-link-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m3 17.37 14-14m0 0H4.75m12.25 0v12.25"/></svg></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" data-image="images/about_img_1_o.jpg" data-price="from 170 €">
+                            <div class="accordion-toggle">
+                                <h3>Facial peels</h3>
+                                <span class="icon icon-chevron"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1.875 6.194 8.125 7.5 8.125-7.5"/></svg></span>
+                            </div>
+                            <div class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <p>Revitalize your skin with our invigorating facial scrubs. Gentle exfoliation removes dead cells, revealing a radiant and refreshed complexion.</p>
+                                    <a href="#" class="btn btn-sm btn-beige-2"><span class="btn-text">read more</span><span class="btn-icon icon-link-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m3 17.37 14-14m0 0H4.75m12.25 0v12.25"/></svg></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" data-image="images/about_img_2_o.jpg" data-price="from 180 €">
+                            <div class="accordion-toggle">
+                                <h3>Dermadrop TDA System</h3>
+                                <span class="icon icon-chevron"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1.875 6.194 8.125 7.5 8.125-7.5"/></svg></span>
+                            </div>
+                            <div class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <p>Rejuvenate your skin with the Dermadrop TDA System. This advanced non-invasive treatment delivers active ingredients deep into the skin, providing intense hydration and improving overall skin texture.</p>
+                                    <a href="#" class="btn btn-sm btn-beige-2"><span class="btn-text">read more</span><span class="btn-icon icon-link-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m3 17.37 14-14m0 0H4.75m12.25 0v12.25"/></svg></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" data-image="images/about_img_3_o.jpg" data-price="from 230 €">
+                            <div class="accordion-toggle">
+                                <h3>Endospheres Therapy</h3>
+                                <span class="icon icon-chevron"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1.875 6.194 8.125 7.5 8.125-7.5"/></svg></span>
+                            </div>
+                            <div class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <p>Achieve smoother and firmer skin with Endospheres Therapy. This innovative treatment uses microvibration to enhance circulation, reduce cellulite, and promote a more toned appearance.</p>
+                                    <a href="#" class="btn btn-sm btn-beige-2"><span class="btn-text">read more</span><span class="btn-icon icon-link-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m3 17.37 14-14m0 0H4.75m12.25 0v12.25"/></svg></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" data-image="images/about_img_4_o.jpg" data-price="from 160 €">
+                            <div class="accordion-toggle">
+                                <h3>Biologique Recherche</h3>
+                                <span class="icon icon-chevron"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1.875 6.194 8.125 7.5 8.125-7.5"/></svg></span>
+                            </div>
+                            <div class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <p>Transform your skin with Biologique Recherche treatments. Using high-quality, concentrated formulas, these treatments target specific skin concerns for visible and lasting results.</p>
+                                    <a href="#" class="btn btn-sm btn-beige-2"><span class="btn-text">read more</span><span class="btn-icon icon-link-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m3 17.37 14-14m0 0H4.75m12.25 0v12.25"/></svg></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" data-image="images/service_6.jpg" data-price="from 250 €">
+                            <div class="accordion-toggle">
+                                <h3>ZO Obagi</h3>
+                                <span class="icon icon-chevron"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1.875 6.194 8.125 7.5 8.125-7.5"/></svg></span>
+                            </div>
+                            <div class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <p>Discover the power of ZO Obagi skincare. Our treatments incorporate these medical-grade products to address various skin issues, from acne to aging, ensuring a clearer and more youthful complexion.</p>
+                                    <a href="#" class="btn btn-sm btn-beige-2"><span class="btn-text">read more</span><span class="btn-icon icon-link-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m3 17.37 14-14m0 0H4.75m12.25 0v12.25"/></svg></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" data-image="images/service_7.jpg" data-price="from 325 €">
+                            <div class="accordion-toggle">
+                                <h3>DMK</h3>
+                                <span class="icon icon-chevron"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1.875 6.194 8.125 7.5 8.125-7.5"/></svg></span>
+                            </div>
+                            <div class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <p>Revitalize your skin with DMK enzyme therapy. This unique treatment works with your body’s chemistry to rebuild and protect the skin, resulting in a healthier and more resilient complexion.</p>
+                                    <a href="#" class="btn btn-sm btn-beige-2"><span class="btn-text">read more</span><span class="btn-icon icon-link-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m3 17.37 14-14m0 0H4.75m12.25 0v12.25"/></svg></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-5">
+                    <div class="img-clip" id="service-img-wrp">
+                        <div class="bg-decor">
+                            <div class="bg-spot service-section"></div>
+                            <img src="/images/ripple_decor.svg" loading="lazy" alt="" class="ripple-bg"/>
+                        </div>
+                        <div class="service-img">
+                            <div class="current-img" style="background-image: url('/images/facial-scrub-o.jpg');"></div>
+                            <div class="next-img"></div>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="0px" height="0px" viewBox="0 0 543 441" fill="none" class="clip-mask">
+                            <defs>
+                                <clipPath id="mask3" clipPathUnits="objectBoundingBox">
+                                    <path d="M0.5746924493554327,0.006199319727891157c0.2187826887661142,0.039596371882086166,0.40216390423572745,0.21616780045351475,0.42361325966850827,0.4464126984126984c0.020349907918968693,0.218453514739229,-0.14550644567219154,0.38991609977324265,-0.33722836095764275,0.4809138321995465c-0.18903130755064457,0.08972108843537414,-0.419841620626151,0.10405668934240364,-0.5612430939226519,-0.054464852607709745c-0.14256537753222837,-0.15982539682539684,-0.11850092081031308,-0.402,-0.01523756906077348,-0.5918140589569161c0.10165193370165747,-0.18685260770975057,0.28696869244935547,-0.3178095238095238,0.49009576427255985,-0.28104761904761905z" fill="white"></path>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <div class="service-price"><span>from 170 €</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="equipment-module swiper-carousel">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-title-wrp">
+                    <div class="section-title">Our Equipment</div>
+                </div>
+                <div class="navigation-wrp">
+                    <div class="sw-pagination"></div>
+                    <div class="arrows-control">
+                        <button role="button" class="btn swiper-arrow sw-button-prev"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#222" stroke-linecap="round" stroke-width="2" d="M18.333 10H1.667m16.666 0-6.908-7.5m6.908 7.5-6.908 7.5"/></svg></button>
+                        <button role="button" class="btn swiper-arrow sw-button-next"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#222" stroke-linecap="round" stroke-width="2" d="M18.333 10H1.667m16.666 0-6.908-7.5m6.908 7.5-6.908 7.5"/></svg></button>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex gap-50 align-items-center">
+                <div class="headline-wrp col-4 text-right">
+                    <div class="headline-text">
+                        <h2 class="h2 mb-2">New Generation Machines</h2>
+                        <p>The best machines for sustainable results</p>
+                    </div>
+                    <a href="#" class="btn btn-md btn-beige-1 mt-4">
+                        <span class="btn-text">explore</span><span class="btn-icon icon-link-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m3 17.37 14-14m0 0H4.75m12.25 0v12.25"/></svg></span>
+                    </a>
+                </div>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="/images/equipment-1-o.jpg" loading="lazy" class="img"/>
+                            <div class="slide-content">
+                                <h3 class="h3">AlviDerm Vacuum Hydropeeling</h3>
+                                <p class="text">Meet our AlviDerm Vacuum Hydropeeling device – your ultimate skincare solution. Crafted by top European engineers, it offers sought-after techniques for intensive care, ensuring radiant, healthy skin.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/images/equipment-4-o.jpg" loading="lazy" class="img"/>
+                            <div class="slide-content">
+                                <h3 class="h3">Remodeling Face Machine</h3>
+                                <p class="text">Experience our Remodeling Face Machine: painlessly sculpting facial muscles for a contoured chin, enhanced cheekbones, and wider eyes. Utilizes four electric currents and radio-frequency waves for optimal results.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/images/equipment-3-o.jpg" loading="lazy" class="img"/>
+                            <div class="slide-content">
+                                <h3 class="h3">Innovative Technology</h3>
+                                <p class="text">Innovative technology delivering hyaluronic acid, vitamins, microelements, and amino acids deep into the skin layers without injections.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/images/equipment-4-o.jpg" loading="lazy" class="img"/>
+                            <div class="slide-content">
+                                <h3 class="h3">Remodeling Face Machine</h3>
+                                <p class="text">Experience our Remodeling Face Machine: painlessly sculpting facial muscles for a contoured chin, enhanced cheekbones, and wider eyes. Utilizes four electric currents and radio-frequency waves for optimal results.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/images/equipment-1-o.jpg" loading="lazy" class="img"/>
+                            <div class="slide-content">
+                                <h3 class="h3">AlviDerm Vacuum Hydropeeling</h3>
+                                <p class="text">Meet our AlviDerm Vacuum Hydropeeling device – your ultimate skincare solution. Crafted by top European engineers, it offers sought-after techniques for intensive care, ensuring radiant, healthy skin.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/images/equipment-4-o.jpg" loading="lazy" class="img"/>
+                            <div class="slide-content">
+                                <h3 class="h3">Remodeling Face Machine</h3>
+                                <p class="text">Experience our Remodeling Face Machine: painlessly sculpting facial muscles for a contoured chin, enhanced cheekbones, and wider eyes. Utilizes four electric currents and radio-frequency waves for optimal results.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/images/equipment-3-o.jpg" loading="lazy" class="img"/>
+                            <div class="slide-content">
+                                <h3 class="h3">Innovative Technology</h3>
+                                <p class="text">Innovative technology delivering hyaluronic acid, vitamins, microelements, and amino acids deep into the skin layers without injections.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/images/equipment-4-o.jpg" loading="lazy" class="img"/>
+                            <div class="slide-content">
+                                <h3 class="h3">Remodeling Face Machine</h3>
+                                <p class="text">Experience our Remodeling Face Machine: painlessly sculpting facial muscles for a contoured chin, enhanced cheekbones, and wider eyes. Utilizes four electric currents and radio-frequency waves for optimal results.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="special-offer">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <div class="col">
+                    <h2 class="h2">Discounted Procedure Package</h2>
+                    <a href="#" class="btn btn-md btn-white mt-4">
+                        <span class="btn-text">explore</span><span class="btn-icon icon-link-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m3 17.37 14-14m0 0H4.75m12.25 0v12.25"/></svg></span>
+                    </a>
+                </div>
+                <div class="col img-clip">
+                    <img src="/images/discounted-package-o.jpg" width="324.5" alt="" style="clip-path:url(#mask4)" loading="lazy"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="0px" height="0px" viewBox="0 0 324 330" fill="none" class="clip-mask">
+                        <defs>
+                            <clipPath id="mask4" clipPathUnits="objectBoundingBox">
+                                <path d="M0.44528395061728393,0.5c-0.024555555555555556,0.27614242424242424,-0.1431388888888889,0.5,-0.2648611111111111,0.5c-0.12172530864197531,0,-0.2004938271604938,-0.22385757575757578,-0.17593827160493827,-0.5c0.024555555555555556,-0.27614242424242424,0.1431388888888889,-0.5,0.2648641975308642,-0.5c0.12172222222222223,0,0.2004938271604938,0.22385757575757578,0.1759351851851852,0.5z" fill="white"></path>
+                                <path d="M0.7134660493827161,0.5c-0.024558641975308642,0.27614242424242424,-0.14314197530864198,0.5,-0.2648641975308642,0.5c-0.12172530864197531,0,-0.2004938271604938,-0.22385757575757578,-0.17593827160493827,-0.5c0.024555555555555556,-0.27614242424242424,0.1431388888888889,-0.5,0.2648641975308642,-0.5c0.12172222222222223,0,0.2004938271604938,0.22385757575757578,0.17593827160493827,0.5z" fill="white"></path>
+                                <path d="M0.9955154320987655,0.5c-0.024555555555555556,0.27614242424242424,-0.1431388888888889,0.5,-0.2648641975308642,0.5c-0.12172222222222223,0,-0.2004938271604938,-0.22385757575757578,-0.1759351851851852,-0.5c0.024555555555555556,-0.27614242424242424,0.1431388888888889,-0.5,0.2648641975308642,-0.5c0.12172222222222223,0,0.20049074074074075,0.22385757575757578,0.1759351851851852,0.5z" fill="white"></path>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="col text-right">
+                    <h3>Indulge in 8 luxurious treatments and enjoy a dazzling 20% off!</h3>
+                    <button type="button" class="btn btn-gold make-reservation mt-4">Make a Reservation <span class="icon icon-calendar"></span></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="reviews-module swiper-carousel">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-title">
+                    <div>Testimonials</div>
+                </div>
+                <div class="navigation-wrp">
+                    <div class="sw-pagination"></div>
+                    <div class="arrows-control">
+                        <button role="button" class="btn swiper-arrow sw-button-prev"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#222" stroke-linecap="round" stroke-width="2" d="M18.333 10H1.667m16.666 0-6.908-7.5m6.908 7.5-6.908 7.5"/></svg></button>
+                        <button role="button" class="btn swiper-arrow sw-button-next"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#222" stroke-linecap="round" stroke-width="2" d="M18.333 10H1.667m16.666 0-6.908-7.5m6.908 7.5-6.908 7.5"/></svg></button>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex gap-50 align-items-center">
+                <div class="headline-wrp col-4 text-right">
+                    <div class="d-flex flex-column headline-text text-right">
+                        <h2 class="h2 text-right">What Our Customers Say</h2>
+                        <div class="google-reviews-widget">
+                            <img src="/icons/google.svg" loading="lazy" alt="Google logo" class="google-logo"/>
+                            <div class="average-rating-wrp">
+                                <div class="average-rating">
+                                    <div class="score">5.0</div>
+                                    <wrapper class="divider"></wrapper>
+                                    <div class="g_star_rating"><span></span></div>
+                                </div>
+                                <div class="total-review-count">based on <a target="_blank" href="https://www.google.com/search?q=tvoya+sch%C3%B6nheitsinstitut&rlz=1C1CHZO_ruUA1046UA1046&oq=tvoya+sch%C3%B6nheitsinstitut&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MggIARAAGBYYHjIKCAIQABiABBiiBDIKCAMQABiABBiiBDIKCAQQABiABBiiBDIKCAUQABiABBiiBDIKCAYQABiABBiiBNIBCDIyNzlqMGoxqAIAsAIA&sourceid=chrome&ie=UTF-8#lrd=0x479e75789050d535:0xa791ce72f19386f5,1,,,," hover-tooltip="Check out our Google reviews" tooltip-position="top" tooltip-wrap="wrap">50 reviews</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper">
+                    <div class="bg-decor">
+                        <div class="bg-spot blue"></div>
+                        <div class="bg-spot yellow"></div>
+                    </div>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="review_item show_translated">
+                                <div class="r_body">
+                                    <div class="r_head">
+                                        <div class="g_star_rating four_star"><span></span></div>
+                                        <div class="r_date">2 years ago</div>
+                                    </div>
+                                    <div class="r_text">
+                                        <span class="translated_trunc">I would like to say thank you very much to the wonderful beautician Valentina! She is a wonderful specialist, very tactful and delicate during the procedure. It is very comfortable to communicate with … </span>
+                                        <span class="original_trunc">Хочу сказать спасибо большое прекрасному косметологу Валентине! Замечательный специалист, при проведении процедуры очень тактичная и деликатная. В общении очень с ней комфортно … </span>
+                                        <span class="translated full_text">I would like to say thank you very much to the wonderful beautician Valentina! She is a wonderful specialist, very tactful and delicate during the procedure. I would like to express my gratitude to her professionalism, light hands and the magic that she did to my face. As one famous cartoon said: *I am yours forever*<br>I recommend to all girls who care about the beauty of their appearance.💙💙💙</span>
+                                        <span class="original full_text">Хочу сказать спасибо большое прекрасному косметологу Валентине! Замечательный специалист, при проведении процедуры очень тактичная и деликатная. В общении очень с ней комфортно, ответит на все вопросы.Хочу выразить огромную благодарность  её профессионализму, лёгким рукам и тому волшебству, что она сотворила  с моим лицом. Как говорилось в одном известном мультфильме: * Я ваша на веки*<br>Рекомендую всем девочкам кто заботится о  красоте своей внешности.💙💙💙</span>
+                                        <span class="read-more">read more</span></div>
+                                </div>
+                                <div class="r_meta">
+                                    <div class="r_author">
+                                        <img src="/images/reviews/author_1.png" loading="lazy" alt="Elena Romaniutina" class="r_author_img"/>
+                                        <div>
+                                            <div class="r_author_name">Elena Romaniutina</div>
+                                            <div class="r_source">Review from Google</div>
+                                        </div>
+                                    </div>
+                                    <div class="translate_review" hover-tooltip="Show original text" tooltip-position="top-right" tooltip-wrap="nowrap">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path fill="#CEB588" d="m9.878 18.088 3.706-9.6h1.71l3.706 9.6h-1.71l-.876-2.44h-3.95l-.876 2.44h-1.71Zm-6.435-2.4-1.14-1.12 4.113-4.04c-.475-.466-.906-1-1.293-1.6-.387-.6-.743-1.28-1.069-2.04h1.71c.272.52.544.973.815 1.36.272.387.597.773.978 1.16.448-.44.913-1.057 1.395-1.85.482-.794.845-1.55 1.089-2.27H1v-1.6h5.701v-1.6h1.63v1.6h5.7v1.6H11.67c-.285.96-.713 1.947-1.283 2.96s-1.134 1.787-1.69 2.32l1.955 1.96-.611 1.64-2.484-2.5-4.114 4.02Zm9.53-1.44h2.932l-1.466-4.08-1.466 4.08Z"/></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="review_item show_translated">
+                                <div class="r_body">
+                                    <div class="r_head">
+                                        <div class="g_star_rating three_star"><span></span></div>
+                                        <div class="r_date">3 months ago</div>
+                                    </div>
+                                    <div class="r_text">
+                                        <span class="translated_trunc">If I could give it 10 stars I would be happy to do so! Schönheitsinstitut "Tvoya" is top notch. Beautiful and stylish interior, from the doorstep you feel like a special client, I have not met such an attitude … </span>
+                                        <span class="original_trunc">Если бы можно было поставить 10 звёзд-я бы с радостью это сделала! Schönheitsinstitut "Tvoya" на высоте. Красивый и стильный интерьер, с порога чувствуешь себя особым клиентом … </span>
+                                        <span class="translated full_text">If I could give it 10 stars I would be happy to do so! Schönheitsinstitut "Tvoya" is top notch. Beautiful and stylish interior, from the doorstep you feel like a special client, I have not met such an attitude anywhere else. Coming there you get both aesthetic pleasure and quality services. Nice staff and, most importantly, incredible doctors! I come from Austria, I have been there more than once and I will be back again and again! I have been to Valentina for a facial cleanse, peel and maintenance treatments. Valentina was very informative about further care and how to achieve the desired results. Another plus is that after the procedure in the salon you can immediately buy cosmetics. That significantly helps to prolong and preserve the result after the salon procedure. Valentina envelops you with gentle care every time. You want to come back here and spend as much time as possible! I look forward to the next term!</span>
+                                        <span class="original full_text">Если бы можно было поставить 10 звёзд-я бы с радостью это сделала! Schönheitsinstitut "Tvoya" на высоте. Красивый и стильный интерьер, с порога чувствуешь себя особым клиентом, такого отношения я не встречала нигде. Приходя туда получаешь и эстетическое удовольствие и качественные услуги. Приятный коллектив и, что самое главное, невероятные врачи! Я приезжаю из Австрии, была не один раз и вернусь ещё и ещё!! Я была у Валентины, делала чистку лица, пилинг и уходовые процедуры. Валентина очень информативно рассказала про дальнейший уход и как добиться желаемого результата. Еще один плюс заключается в том, что после процедуры в салоне можно сразу же приобрести косметику. Что значительно помогает продлить и сохранить результат после салонной процедуры. Валентина окутывает бережной заботой каждый раз. Сюда хочется возращаться и проводить как можно больше времени! Я с нетерпением жду следующего термина!</span>
+                                        <span class="read-more">read more</span>
+                                    </div>
+                                </div>
+                                <div class="r_meta">
+                                    <div class="r_author">
+                                        <img src="/images/reviews/no_avatar.png" loading="lazy" alt="Алена Кишова" class="r_author_img"/>
+                                        <div>
+                                            <div class="r_author_name">Алена Кишова</div>
+                                            <div class="r_source">Review from Google</div>
+                                        </div>
+                                    </div>
+                                    <div class="translate_review" hover-tooltip="Show original text" tooltip-position="top-right" tooltip-wrap="nowrap">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path fill="#CEB588" d="m9.878 18.088 3.706-9.6h1.71l3.706 9.6h-1.71l-.876-2.44h-3.95l-.876 2.44h-1.71Zm-6.435-2.4-1.14-1.12 4.113-4.04c-.475-.466-.906-1-1.293-1.6-.387-.6-.743-1.28-1.069-2.04h1.71c.272.52.544.973.815 1.36.272.387.597.773.978 1.16.448-.44.913-1.057 1.395-1.85.482-.794.845-1.55 1.089-2.27H1v-1.6h5.701v-1.6h1.63v1.6h5.7v1.6H11.67c-.285.96-.713 1.947-1.283 2.96s-1.134 1.787-1.69 2.32l1.955 1.96-.611 1.64-2.484-2.5-4.114 4.02Zm9.53-1.44h2.932l-1.466-4.08-1.466 4.08Z"/></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="review_item show_translated">
+                                <div class="r_body">
+                                    <div class="r_head">
+                                        <div class="g_star_rating two_star"><span></span></div>
+                                        <div class="r_date">5 months ago</div>
+                                    </div>
+                                    <div class="r_text">
+                                        <span class="translated_trunc">Valya is a treasure among beauticians! She is a real professional, which I really missed after moving. I have quite problematic skin and it has always been quite difficult for me to find a competent cosmetologist, but now … </span>
+                                        <span class="original_trunc">Валя - сокровище среди косметологов! настоящий профессионал своего дела, которого мне очень не хватало после переезда. У меня достаточно проблемная кожа и мне всегда было довольно сложно найти грамотного косметолога, а сейчас … </span>
+                                        <span class="translated full_text">Valya is a treasure among beauticians! She is a real professional, which I really missed after moving. I have quite problematic skin and it has always been quite difficult for me to find a competent cosmetologist, but now I can say that this is the best cosmetologist to whom I have ever gone - always approaches care in a comprehensive way, gives valuable recommendations and never advises unnecessary. I see the result of her work every day in the mirror - well-groomed, radiant, clean skin - I never thought I would be able to leave the house without foundation on my face, but now I go out and with pleasure. And the atmosphere in the salon deserves separate words - always incredibly warm, warm, always delicious coffee, fresh flowers and open, friendly сотрудницы🕊️.<br>I recommend it with all my heart!</span>
+                                        <span class="original full_text">Валя - сокровище среди косметологов! настоящий профессионал своего дела, которого мне очень не хватало после переезда. У меня достаточно проблемная кожа и мне всегда было довольно сложно найти грамотного косметолога, а сейчас могу сказать, что это лучший косметолог, к которому я когда-либо обращалась - всегда комплексно подходит к уходу, дает ценные рекомендации и никогда не посоветует лишнего. Вижу результат трудов каждый день в зеркале - ухоженная, сияющая, чистая кожа - я никогда не думала, что смогу выходить из дома без тона на лице, а сейчас выхожу и с удовольствием. А атмосфера в салоне заслуживает отдельных слов - всегда невероятно тепло, душевно, всегда вкусный кофе , свежие цветы и открытые, дружелюбные сотрудницы🕊️<br>Рекомендую всем сердцем !</span>
+                                        <span class="read-more">read more</span></div>
+                                </div>
+                                <div class="r_meta">
+                                    <div class="r_author">
+                                        <img src="/images/reviews/no_avatar.png" loading="lazy" alt="Vera Strochkova" class="r_author_img"/>
+                                        <div>
+                                            <div class="r_author_name">Vera Strochkova</div>
+                                            <div class="r_source">Review from Google</div>
+                                        </div>
+                                    </div>
+                                    <div class="translate_review" hover-tooltip="Show original text" tooltip-position="top-right" tooltip-wrap="nowrap">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path fill="#CEB588" d="m9.878 18.088 3.706-9.6h1.71l3.706 9.6h-1.71l-.876-2.44h-3.95l-.876 2.44h-1.71Zm-6.435-2.4-1.14-1.12 4.113-4.04c-.475-.466-.906-1-1.293-1.6-.387-.6-.743-1.28-1.069-2.04h1.71c.272.52.544.973.815 1.36.272.387.597.773.978 1.16.448-.44.913-1.057 1.395-1.85.482-.794.845-1.55 1.089-2.27H1v-1.6h5.701v-1.6h1.63v1.6h5.7v1.6H11.67c-.285.96-.713 1.947-1.283 2.96s-1.134 1.787-1.69 2.32l1.955 1.96-.611 1.64-2.484-2.5-4.114 4.02Zm9.53-1.44h2.932l-1.466-4.08-1.466 4.08Z"/></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="review_item show_translated">
+                                <div class="r_body">
+                                    <div class="r_head">
+                                        <div class="g_star_rating one_star"><span></span></div>
+                                        <div class="r_date">2 years ago</div>
+                                    </div>
+                                    <div class="r_text">
+                                        <span class="translated_trunc">I would like to say thank you very much to the wonderful beautician Valentina! She is a wonderful specialist, very tactful and delicate during the procedure. It is very comfortable to communicate with her, she will answer … </span>
+                                        <span class="original_trunc">Хочу сказать спасибо большое прекрасному косметологу Валентине! Замечательный специалист, при проведении процедуры очень тактичная и деликатная. В общении очень с ней комфортно … </span>
+                                        <span class="translated full_text">I would like to say thank you very much to the wonderful beautician Valentina! She is a wonderful specialist, very tactful and delicate during the procedure. I would like to express my gratitude to her professionalism, light hands and the magic that she did to my face. As one famous cartoon said: *I am yours forever*<br>I recommend to all girls who care about the beauty of their appearance.💙💙💙</span>
+                                        <span class="original full_text">Хочу сказать спасибо большое прекрасному косметологу Валентине! Замечательный специалист, при проведении процедуры очень тактичная и деликатная. В общении очень с ней комфортно, ответит на все вопросы.Хочу выразить огромную благодарность  её профессионализму, лёгким рукам и тому волшебству, что она сотворила  с моим лицом. Как говорилось в одном известном мультфильме: * Я ваша на веки*<br>Рекомендую всем девочкам кто заботится о  красоте своей внешности.💙💙💙</span>
+                                        <span class="read-more">read more</span></div>
+                                </div>
+                                <div class="r_meta">
+                                    <div class="r_author">
+                                        <img src="/images/reviews/author_1.png" loading="lazy" alt="Elena Romaniutina" class="r_author_img"/>
+                                        <div>
+                                            <div class="r_author_name">Elena Romaniutina</div>
+                                            <div class="r_source">Review from Google</div>
+                                        </div>
+                                    </div>
+                                    <div class="translate_review" hover-tooltip="Show original text" tooltip-position="top-right" tooltip-wrap="nowrap">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path fill="#CEB588" d="m9.878 18.088 3.706-9.6h1.71l3.706 9.6h-1.71l-.876-2.44h-3.95l-.876 2.44h-1.71Zm-6.435-2.4-1.14-1.12 4.113-4.04c-.475-.466-.906-1-1.293-1.6-.387-.6-.743-1.28-1.069-2.04h1.71c.272.52.544.973.815 1.36.272.387.597.773.978 1.16.448-.44.913-1.057 1.395-1.85.482-.794.845-1.55 1.089-2.27H1v-1.6h5.701v-1.6h1.63v1.6h5.7v1.6H11.67c-.285.96-.713 1.947-1.283 2.96s-1.134 1.787-1.69 2.32l1.955 1.96-.611 1.64-2.484-2.5-4.114 4.02Zm9.53-1.44h2.932l-1.466-4.08-1.466 4.08Z"/></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="review_item show_translated">
+                                <div class="r_body">
+                                    <div class="r_head">
+                                        <div class="g_star_rating star_rating_unspecified"><span></span></div>
+                                        <div class="r_date">3 months ago</div>
+                                    </div>
+                                    <div class="r_text">
+                                        <span class="translated_trunc">If I could give it 10 stars I would be happy to do so! Schönheitsinstitut "Tvoya" is top notch. Beautiful and stylish interior, from the doorstep you feel like a special client, I have not met such an attitude … </span>
+                                        <span class="original_trunc">Если бы можно было поставить 10 звёзд-я бы с радостью это сделала! Schönheitsinstitut "Tvoya" на высоте. Красивый и стильный интерьер, с порога чувствуешь себя особым клиентом … </span>
+                                        <span class="translated full_text">If I could give it 10 stars I would be happy to do so! Schönheitsinstitut "Tvoya" is top notch. Beautiful and stylish interior, from the doorstep you feel like a special client, I have not met such an attitude anywhere else. Coming there you get both aesthetic pleasure and quality services. Nice staff and, most importantly, incredible doctors! I come from Austria, I have been there more than once and I will be back again and again! I have been to Valentina for a facial cleanse, peel and maintenance treatments. Valentina was very informative about further care and how to achieve the desired results. Another plus is that after the procedure in the salon you can immediately buy cosmetics. That significantly helps to prolong and preserve the result after the salon procedure. Valentina envelops you with gentle care every time. You want to come back here and spend as much time as possible! I look forward to the next term!</span>
+                                        <span class="original full_text">Если бы можно было поставить 10 звёзд-я бы с радостью это сделала! Schönheitsinstitut "Tvoya" на высоте. Красивый и стильный интерьер, с порога чувствуешь себя особым клиентом, такого отношения я не встречала нигде. Приходя туда получаешь и эстетическое удовольствие и качественные услуги. Приятный коллектив и, что самое главное, невероятные врачи! Я приезжаю из Австрии, была не один раз и вернусь ещё и ещё!! Я была у Валентины, делала чистку лица, пилинг и уходовые процедуры. Валентина очень информативно рассказала про дальнейший уход и как добиться желаемого результата. Еще один плюс заключается в том, что после процедуры в салоне можно сразу же приобрести косметику. Что значительно помогает продлить и сохранить результат после салонной процедуры. Валентина окутывает бережной заботой каждый раз. Сюда хочется возращаться и проводить как можно больше времени! Я с нетерпением жду следующего термина!</span>
+                                        <span class="read-more">read more</span>
+                                    </div>
+                                </div>
+                                <div class="r_meta">
+                                    <div class="r_author">
+                                        <img src="/images/reviews/no_avatar.png" loading="lazy" alt="Алена Кишова" class="r_author_img"/>
+                                        <div>
+                                            <div class="r_author_name">Алена Кишова</div>
+                                            <div class="r_source">Review from Google</div>
+                                        </div>
+                                    </div>
+                                    <div class="translate_review" hover-tooltip="Show original text" tooltip-position="top-right" tooltip-wrap="nowrap">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path fill="#CEB588" d="m9.878 18.088 3.706-9.6h1.71l3.706 9.6h-1.71l-.876-2.44h-3.95l-.876 2.44h-1.71Zm-6.435-2.4-1.14-1.12 4.113-4.04c-.475-.466-.906-1-1.293-1.6-.387-.6-.743-1.28-1.069-2.04h1.71c.272.52.544.973.815 1.36.272.387.597.773.978 1.16.448-.44.913-1.057 1.395-1.85.482-.794.845-1.55 1.089-2.27H1v-1.6h5.701v-1.6h1.63v1.6h5.7v1.6H11.67c-.285.96-.713 1.947-1.283 2.96s-1.134 1.787-1.69 2.32l1.955 1.96-.611 1.64-2.484-2.5-4.114 4.02Zm9.53-1.44h2.932l-1.466-4.08-1.466 4.08Z"/></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="review_item show_translated">
+                                <div class="r_body">
+                                    <div class="r_head">
+                                        <div class="g_star_rating five_star"><span></span></div>
+                                        <div class="r_date">5 months ago</div>
+                                    </div>
+                                    <div class="r_text">
+                                        <span class="translated_trunc">Valya is a treasure among beauticians! She is a real professional, which I really missed after moving. I have quite problematic skin and it has always been quite difficult for me to find a competent cosmetologist, but now … </span>
+                                        <span class="original_trunc">Валя - сокровище среди косметологов! настоящий профессионал своего дела, которого мне очень не хватало после переезда. У меня достаточно проблемная кожа и мне всегда было довольно сложно найти грамотного косметолога, а сейчас … </span>
+                                        <span class="translated full_text">Valya is a treasure among beauticians! She is a real professional, which I really missed after moving. I have quite problematic skin and it has always been quite difficult for me to find a competent cosmetologist, but now I can say that this is the best cosmetologist to whom I have ever gone - always approaches care in a comprehensive way, gives valuable recommendations and never advises unnecessary. I see the result of her work every day in the mirror - well-groomed, radiant, clean skin - I never thought I would be able to leave the house without foundation on my face, but now I go out and with pleasure. And the atmosphere in the salon deserves separate words - always incredibly warm, warm, always delicious coffee, fresh flowers and open, friendly сотрудницы🕊️.<br>I recommend it with all my heart!</span>
+                                        <span class="original full_text">Валя - сокровище среди косметологов! настоящий профессионал своего дела, которого мне очень не хватало после переезда. У меня достаточно проблемная кожа и мне всегда было довольно сложно найти грамотного косметолога, а сейчас могу сказать, что это лучший косметолог, к которому я когда-либо обращалась - всегда комплексно подходит к уходу, дает ценные рекомендации и никогда не посоветует лишнего. Вижу результат трудов каждый день в зеркале - ухоженная, сияющая, чистая кожа - я никогда не думала, что смогу выходить из дома без тона на лице, а сейчас выхожу и с удовольствием. А атмосфера в салоне заслуживает отдельных слов - всегда невероятно тепло, душевно, всегда вкусный кофе , свежие цветы и открытые, дружелюбные сотрудницы🕊️<br>Рекомендую всем сердцем !</span>
+                                        <span class="read-more">read more</span></div>
+                                </div>
+                                <div class="r_meta">
+                                    <div class="r_author">
+                                        <img src="/images/reviews/no_avatar.png" loading="lazy" alt="Vera Strochkova" class="r_author_img"/>
+                                        <div>
+                                            <div class="r_author_name">Vera Strochkova</div>
+                                            <div class="r_source">Review from Google</div>
+                                        </div>
+                                    </div>
+                                    <div class="translate_review" hover-tooltip="Show original text" tooltip-position="top-right" tooltip-wrap="nowrap">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path fill="#CEB588" d="m9.878 18.088 3.706-9.6h1.71l3.706 9.6h-1.71l-.876-2.44h-3.95l-.876 2.44h-1.71Zm-6.435-2.4-1.14-1.12 4.113-4.04c-.475-.466-.906-1-1.293-1.6-.387-.6-.743-1.28-1.069-2.04h1.71c.272.52.544.973.815 1.36.272.387.597.773.978 1.16.448-.44.913-1.057 1.395-1.85.482-.794.845-1.55 1.089-2.27H1v-1.6h5.701v-1.6h1.63v1.6h5.7v1.6H11.67c-.285.96-.713 1.947-1.283 2.96s-1.134 1.787-1.69 2.32l1.955 1.96-.611 1.64-2.484-2.5-4.114 4.02Zm9.53-1.44h2.932l-1.466-4.08-1.466 4.08Z"/></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="founder-module">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-title-wrp">
+                    <div class="section-title">Founder</div>
+                </div>
+            </div>
+            <div class="d-flex gap-60 align-items-center">
+                <div class="img-clip col-5">
+                    <img src="/images/founder_1_o.webp" alt="Founder of TVOYA Beauty Institute" style="clip-path:url(#mask5);" loading="lazy" />
+                    <svg xmlns="http://www.w3.org/2000/svg" width="0px" height="0px" viewBox="0 0 491 486" fill="none" class="clip-mask">
+                        <defs>
+                            <clipPath id="mask5" clipPathUnits="objectBoundingBox">
+                                <path d="M0.656,0.023 c0.211,0.06,0.335,0.261,0.344,0.475 c0.009,0.207,-0.104,0.406,-0.303,0.478 c-0.194,0.07,-0.399,-0.02,-0.531,-0.175 c-0.142,-0.165,-0.227,-0.39,-0.111,-0.573 C0.178,0.032,0.431,-0.042,0.656,0.023"></path>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <div class="img-label founder-exp d-flex align-items-center">
+                        <div class="fz-large">10+</div>
+                        <div>Years of<br>experience</div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column gap-30">
+                    <h2 class="h2">Meet Our Founder — Valentina&nbsp;Tuz</h2>
+                    <div class="text-block">
+                        <p>Valentina Tuz, our esteemed founder, brings over 10 years of cosmetology experience, dedicated to transforming lives and instilling confidence. Her passion for beauty and self-care inspired her to create a positive impact for others.</p>
+                    </div>
+                    <div class="d-flex gap-40 bio-highlights">
+                        <div class="col">
+                            <div class="icon icon-certificate"></div>
+                            <h3>Medical Graduate's Learning Path</h3>
+                            <p>Medical school grad, lifelong learner, attended 15+ conferences. Committed to excellence</p>
+                        </div>
+                        <div class="col">
+                            <div class="icon icon-beauty-products"></div>
+                            <h3>Mission and Values</h3>
+                            <p>Empowering beauty, embracing confidence. Integrity, innovation, transformative experiences.</p>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-md btn-beige-1 mt-2">
+                        <span class="btn-text">more about Valentina</span><span class="btn-icon icon-link-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m3 17.37 14-14m0 0H4.75m12.25 0v12.25"/></svg></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="certificates-module swiper-carousel">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-title">
+                    <div>Certificates and Awards</div>
+                </div>
+                <div class="navigation-wrp">
+                    <div class="sw-pagination"></div>
+                    <div class="arrows-control">
+                        <button role="button" class="btn swiper-arrow sw-button-prev"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#222" stroke-linecap="round" stroke-width="2" d="M18.333 10H1.667m16.666 0-6.908-7.5m6.908 7.5-6.908 7.5"/></svg></button>
+                        <button role="button" class="btn swiper-arrow sw-button-next"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#222" stroke-linecap="round" stroke-width="2" d="M18.333 10H1.667m16.666 0-6.908-7.5m6.908 7.5-6.908 7.5"/></svg></button>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex gap-50 align-items-center">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><a href="/images/certificates/01.jpg" data-fancybox="certificates"><img src="/images/certificates/thumbs/01-thumb.jpg" alt="Certificate" loading="lazy"></a></div>
+                        <div class="swiper-slide"><a href="/images/certificates/02.jpg" data-fancybox="certificates"><img src="/images/certificates/thumbs/02-thumb.jpg" alt="Certificate" loading="lazy"></a></div>
+                        <div class="swiper-slide"><a href="/images/certificates/03.jpg" data-fancybox="certificates"><img src="/images/certificates/thumbs/03-thumb.jpg" alt="Certificate" loading="lazy"></a></div>
+                        <div class="swiper-slide"><a href="/images/certificates/04.jpg" data-fancybox="certificates"><img src="/images/certificates/thumbs/04-thumb.jpg" alt="Certificate" loading="lazy"></a></div>
+                        <div class="swiper-slide"><a href="/images/certificates/05.jpg" data-fancybox="certificates"><img src="/images/certificates/thumbs/05-thumb.jpg" alt="Certificate" loading="lazy"></a></div>
+                        <div class="swiper-slide"><a href="/images/certificates/06.jpg" data-fancybox="certificates"><img src="/images/certificates/thumbs/06-thumb.jpg" alt="Certificate" loading="lazy"></a></div>
+                        <div class="swiper-slide"><a href="/images/certificates/07.jpg" data-fancybox="certificates"><img src="/images/certificates/thumbs/07-thumb.jpg" alt="Certificate" loading="lazy"></a></div>
+                        <div class="swiper-slide"><a href="/images/certificates/08.jpg" data-fancybox="certificates"><img src="/images/certificates/thumbs/08-thumb.jpg" alt="Certificate" loading="lazy"></a></div>
+                        <div class="swiper-slide"><a href="/images/certificates/09.jpg" data-fancybox="certificates"><img src="/images/certificates/thumbs/09-thumb.jpg" alt="Certificate" loading="lazy"></a></div>
+                        <div class="swiper-slide"><a href="/images/certificates/10.jpg" data-fancybox="certificates"><img src="/images/certificates/thumbs/10-thumb.jpg" alt="Certificate" loading="lazy"></a></div>
+                        <div class="swiper-slide"><a href="/images/certificates/11.jpg" data-fancybox="certificates"><img src="/images/certificates/thumbs/11-thumb.jpg" alt="Certificate" loading="lazy"></a></div>
+                        <div class="swiper-slide"><a href="/images/certificates/12.jpg" data-fancybox="certificates"><img src="/images/certificates/thumbs/12-thumb.jpg" alt="Certificate" loading="lazy"></a></div>
+                        <div class="swiper-slide"><a href="/images/certificates/13.jpg" data-fancybox="certificates"><img src="/images/certificates/thumbs/13-thumb.jpg" alt="Certificate" loading="lazy"></a></div>
+                        <div class="swiper-slide"><a href="/images/certificates/14.jpg" data-fancybox="certificates"><img src="/images/certificates/thumbs/14-thumb.jpg" alt="Certificate" loading="lazy"></a></div>
+                        <div class="swiper-slide"><a href="/images/certificates/15.jpg" data-fancybox="certificates"><img src="/images/certificates/thumbs/15-thumb.jpg" alt="Certificate" loading="lazy"></a></div>
+                        <div class="swiper-slide"><a href="/images/certificates/16.jpg" data-fancybox="certificates"><img src="/images/certificates/thumbs/16-thumb.jpg" alt="Certificate" loading="lazy"></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="consultation-promo">
+        <div class="container">
+            <div class="big-logo">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 1047 215">
+                    <path fill="#E4DCCA" d="M76.642 10.847h-5.57C12.032 10.847 0 31.195 0 31.195L8.763 4.414h161.974l8.764 26.781s-11.66-20.348-71.073-20.348h-5.273v199.739H76.568l.074-199.739Zm236.017 199.664c-1.039 1.796-4.01 1.646-4.976 0L203.86 4.339h28.963s-7.872 16.009 5.867 43.538c3.342 6.733 63.126 126.951 63.126 126.951l84.812-170.49h29.855L312.659 210.512ZM550.236 0c75.008 0 112.513 53.638 112.513 107.5S625.244 215 550.236 215C475.227 215 437.5 161.138 437.5 107.5S475.004 0 550.236 0Zm-14.853 201.46c68.027 0 107.017-59.099 107.017-111.016 0-40.696-24.137-76.978-77.311-76.978-68.028 0-107.314 58.8-107.314 110.791 0 40.696 24.136 77.203 77.608 77.203ZM671.586 4.414h32.157l67.285 100.767s58.596-77.203 61.047-80.494c2.153-2.918 3.936-8.005 3.564-12.12-.371-4.114-4.604-8.228-4.604-8.228h26.81L777.861 113.41c-1.263 1.646-1.857 3.666-1.857 5.76v91.341h-26.587v-85.955a9.773 9.773 0 0 0-1.634-5.386L671.586 4.414ZM1047 210.511 943.176 4.339c-.817-1.72-4.084-1.72-4.975 0L834.377 210.51h27.775s-4.381-4.638-4.381-13.465c0-7.93 3.713-15.411 10.471-28.951l63.72-126.95 46.342 91.865c-16.19-8.603-44.485-15.934-80.95 5.461 0 0 43.743-23.116 92.09 16.607l27.926 55.359h29.56l.07.074Z" opacity=".5"/>
+                </svg>
+            </div>
+            <div class="d-flex gap-30 align-items-end">
+                <div class="col">
+                    <h2 class="h2">Professional Consultation & Cosmetics Selection</h2>
+                    <a href="#" class="btn btn-md btn-beige-1 mt-4 mb-3">
+                        <span class="btn-text">read more</span><span class="btn-icon icon-link-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m3 17.37 14-14m0 0H4.75m12.25 0v12.25"/></svg></span>
+                    </a>
+                </div>
+                <div class="col img-clip">
+                    <img src="/images/cosmetics_set_o.png" width="390" alt="" loading="lazy"/>
+                </div>
+                <div class="col text-right">
+                    <button type="button" class="btn btn-gold make-reservation mb-3">Make a Reservation <span class="icon icon-calendar"></span></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact-module">
+        <div class="location-map" id="map"></div>
+        <div class="container">
+            <div class="contact-block col-5 d-flex flex-column gap-20">
+                <div class="h2">Contact & Location</div>
+                <div class="section address">
+                    <p class="h3">Address:</p>
+                    <p>Schellingstraße 109a, 80798 München</p>
+                </div>
+                <div class="section working-hours">
+                    <p class="h3">Working hours:</p>
+                    <p>Mon - Fri, 9:00 - 18:00</p>
+                    <p>Appointments by arrangement</p>
+                </div>
+                <div class="section phone">
+                    <p class="h3">Phone:</p>
+                    <p>+49 176-748-744-07</p>
+                </div>
+                <div class="section">
+                    <p class="h3">Exterior views:</p>
+                    <div class="exterior-views">
+                        <a href="/images/equipment-1-o.jpg" data-fancybox="exterior-views"><img src="/images/equipment-1-o.jpg" alt="View 1" loading="lazy"/></a>
+                        <a href="/images/equipment-2-o.jpg" data-fancybox="exterior-views"><img src="/images/equipment-2-o.jpg" alt="View 2" loading="lazy"/></a>
+                        <a href="/images/equipment-3-o.jpg" data-fancybox="exterior-views"><img src="/images/equipment-3-o.jpg" alt="View 3" loading="lazy"/></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="news-module swiper-carousel">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-title">
+                    <div>Latest News</div>
+                </div>
+                <div class="navigation-wrp">
+                    <div class="sw-pagination"></div>
+                    <div class="arrows-control">
+                        <button role="button" class="btn swiper-arrow sw-button-prev"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#222" stroke-linecap="round" stroke-width="2" d="M18.333 10H1.667m16.666 0-6.908-7.5m6.908 7.5-6.908 7.5"/></svg></button>
+                        <button role="button" class="btn swiper-arrow sw-button-next"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#222" stroke-linecap="round" stroke-width="2" d="M18.333 10H1.667m16.666 0-6.908-7.5m6.908 7.5-6.908 7.5"/></svg></button>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex gap-50 align-items-center">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <!-- .news-item>img.news-img+(.news-body>span.date+h3+p.text)+.news-link>.btn.btn-link -->
+                            <div class="news-item">
+                                <img src="/images/news/news-1.jpg" alt="Grand Opening Event: Unveiling Our New Salon Location" class="news-img" loading="lazy">
+                                <div class="news-body">
+                                    <span class="date">April 28, 2024</span>
+                                    <h3>Grand Opening Event: Unveiling Our New Salon Location</h3>
+                                    <p class="text">Join us on April 28th for the grand opening of our new salon location! Experience top-notch services, exclusive offers, and exciting giveaways.</p>
+                                </div>
+                                <a href="#" class="btn btn-sm btn-link"><span class="btn-text">Read more</span><span class="btn-icon icon-link-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m3 17.37 14-14m0 0H4.75m12.25 0v12.25"></path></svg></span></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="news-item">
+                                <img src="/images/news/news-2.jpg" alt="Introducing Our Latest Skincare Innovation: HydraGlow Therapy" class="news-img" loading="lazy">
+                                <div class="news-body">
+                                    <span class="date">April 28, 2024</span>
+                                    <h3>Introducing Our Latest Skincare Innovation: HydraGlow Therapy</h3>
+                                    <p class="text">We're thrilled to introduce HydraGlow Therapy! Reveal radiant, hydrated skin with our revolutionary treatment, now available at our salon.</p>
+                                </div>
+                                <a href="#" class="btn btn-sm btn-link"><span class="btn-text">Read more</span><span class="btn-icon icon-link-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m3 17.37 14-14m0 0H4.75m12.25 0v12.25"></path></svg></span></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="news-item">
+                                <img src="/images/news/news-3.jpg" alt="Celebrating Mother's Day: Pamper Your Mom at Our Salon" class="news-img" loading="lazy">
+                                <div class="news-body">
+                                    <span class="date">April 28, 2024</span>
+                                    <h3>Celebrating Mother's Day: Pamper Your Mom at Our Salon</h3>
+                                    <p class="text">Show your mom some love this Mother's Day! Treat her to a day of relaxation and beauty with our special pampering packages.</p>
+                                </div>
+                                <a href="#" class="btn btn-sm btn-link"><span class="btn-text">Read more</span><span class="btn-icon icon-link-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m3 17.37 14-14m0 0H4.75m12.25 0v12.25"></path></svg></span></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="news-item">
+                                <img src="/images/news/news-4.jpg" alt="Join Our Team: We're Hiring Experienced Hairstylists!" class="news-img" loading="lazy">
+                                <div class="news-body">
+                                    <span class="date">April 28, 2024</span>
+                                    <h3>Join Our Team: We're Hiring Experienced Hairstylists!</h3>
+                                    <p class="text">Are you a talented hairstylist looking for a new opportunity? Join our dynamic team and showcase your skills at our thriving salon! Apply now.</p>
+                                </div>
+                                <a href="#" class="btn btn-sm btn-link"><span class="btn-text">Read more</span><span class="btn-icon icon-link-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m3 17.37 14-14m0 0H4.75m12.25 0v12.25"></path></svg></span></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="news-item">
+                                <img src="/images/news/news-2.jpg" alt="Introducing Our Latest Skincare Innovation: HydraGlow Therapy" class="news-img" loading="lazy">
+                                <div class="news-body">
+                                    <span class="date">April 28, 2024</span>
+                                    <h3>Introducing Our Latest Skincare Innovation: HydraGlow Therapy</h3>
+                                    <p class="text">We're thrilled to introduce HydraGlow Therapy! Reveal radiant, hydrated skin with our revolutionary treatment, now available at our salon.</p>
+                                </div>
+                                <a href="#" class="btn btn-sm btn-link"><span class="btn-text">Read more</span><span class="btn-icon icon-link-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m3 17.37 14-14m0 0H4.75m12.25 0v12.25"></path></svg></span></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="news-item">
+                                <img src="/images/news/news-3.jpg" alt="Celebrating Mother's Day: Pamper Your Mom at Our Salon" class="news-img" loading="lazy">
+                                <div class="news-body">
+                                    <span class="date">April 28, 2024</span>
+                                    <h3>Celebrating Mother's Day: Pamper Your Mom at Our Salon</h3>
+                                    <p class="text">Show your mom some love this Mother's Day! Treat her to a day of relaxation and beauty with our special pampering packages.</p>
+                                </div>
+                                <a href="#" class="btn btn-sm btn-link"><span class="btn-text">Read more</span><span class="btn-icon icon-link-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m3 17.37 14-14m0 0H4.75m12.25 0v12.25"></path></svg></span></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="news-item">
+                                <img src="/images/news/news-1.jpg" alt="Join Our Team: We're Hiring Experienced Hairstylists!" class="news-img" loading="lazy">
+                                <div class="news-body">
+                                    <span class="date">April 28, 2024</span>
+                                    <h3>Join Our Team: We're Hiring Experienced Hairstylists!</h3>
+                                    <p class="text">Are you a talented hairstylist looking for a new opportunity? Join our dynamic team and showcase your skills at our thriving salon! Apply now.</p>
+                                </div>
+                                <a href="#" class="btn btn-sm btn-link"><span class="btn-text">Read more</span><span class="btn-icon icon-link-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m3 17.37 14-14m0 0H4.75m12.25 0v12.25"></path></svg></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="photo-gallery">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-title">
+                    <div>Photo Gallery</div>
+                </div>
+            </div>
+        </div>
+        <div class="gallery-row line-1">
+            <a href="/images/gallery/photo-01.jpg" data-fancybox="gallery"><img src="/images/gallery/thumbs/01-thumb.jpg" alt="Gallery photo" loading="lazy"></a>
+            <a href="/images/gallery/photo-02.jpg" data-fancybox="gallery"><img src="/images/gallery/thumbs/02-thumb.jpg" alt="Gallery photo" loading="lazy"></a>
+            <a href="/images/gallery/photo-03.jpg" data-fancybox="gallery"><img src="/images/gallery/thumbs/03-thumb.jpg" alt="Gallery photo" loading="lazy"></a>
+            <a href="/images/gallery/photo-04.jpg" data-fancybox="gallery"><img src="/images/gallery/thumbs/04-thumb.jpg" alt="Gallery photo" loading="lazy"></a>
+            <a href="/images/gallery/photo-05.jpg" data-fancybox="gallery"><img src="/images/gallery/thumbs/05-thumb.jpg" alt="Gallery photo" loading="lazy"></a>
+            <a href="/images/gallery/photo-06.jpg" data-fancybox="gallery"><img src="/images/gallery/thumbs/06-thumb.jpg" alt="Gallery photo" loading="lazy"></a>
+            <a href="/images/gallery/photo-07.jpg" data-fancybox="gallery"><img src="/images/gallery/thumbs/07-thumb.jpg" alt="Gallery photo" loading="lazy"></a>
+            <a href="/images/gallery/photo-08.jpg" data-fancybox="gallery"><img src="/images/gallery/thumbs/08-thumb.jpg" alt="Gallery photo" loading="lazy"></a>
+            <a href="/images/gallery/photo-09.jpg" data-fancybox="gallery"><img src="/images/gallery/thumbs/09-thumb.jpg" alt="Gallery photo" loading="lazy"></a>
+            <a href="/images/gallery/photo-10.jpg" data-fancybox="gallery"><img src="/images/gallery/thumbs/10-thumb.jpg" alt="Gallery photo" loading="lazy"></a>
+            <a href="/images/gallery/photo-11.jpg" data-fancybox="gallery"><img src="/images/gallery/thumbs/11-thumb.jpg" alt="Gallery photo" loading="lazy"></a>
+            <a href="/images/gallery/photo-12.jpg" data-fancybox="gallery"><img src="/images/gallery/thumbs/12-thumb.jpg" alt="Gallery photo" loading="lazy"></a>
+            <a href="/images/gallery/photo-13.jpg" data-fancybox="gallery"><img src="/images/gallery/thumbs/13-thumb.jpg" alt="Gallery photo" loading="lazy"></a>
+            <a href="/images/gallery/photo-14.jpg" data-fancybox="gallery"><img src="/images/gallery/thumbs/14-thumb.jpg" alt="Gallery photo" loading="lazy"></a>
+            <a href="/images/gallery/photo-15.jpg" data-fancybox="gallery"><img src="/images/gallery/thumbs/15-thumb.jpg" alt="Gallery photo" loading="lazy"></a>
+            <a href="/images/gallery/photo-16.jpg" data-fancybox="gallery"><img src="/images/gallery/thumbs/16-thumb.jpg" alt="Gallery photo" loading="lazy"></a>
+        </div>
+        <div class="gallery-row line-2">
+            <a href="/images/gallery/photo-17.jpg" data-fancybox="gallery"><img src="/images/gallery/thumbs/17-thumb.jpg" alt="Gallery photo" loading="lazy"></a>
+            <a href="/images/gallery/photo-18.jpg" data-fancybox="gallery"><img src="/images/gallery/thumbs/18-thumb.jpg" alt="Gallery photo" loading="lazy"></a>
+            <a href="/images/gallery/photo-19.jpg" data-fancybox="gallery"><img src="/images/gallery/thumbs/19-thumb.jpg" alt="Gallery photo" loading="lazy"></a>
+            <a href="/images/gallery/photo-20.jpg" data-fancybox="gallery"><img src="/images/gallery/thumbs/20-thumb.jpg" alt="Gallery photo" loading="lazy"></a>
+            <a href="/images/gallery/photo-21.jpg" data-fancybox="gallery"><img src="/images/gallery/thumbs/21-thumb.jpg" alt="Gallery photo" loading="lazy"></a>
+            <a href="/images/gallery/photo-22.jpg" data-fancybox="gallery"><img src="/images/gallery/thumbs/22-thumb.jpg" alt="Gallery photo" loading="lazy"></a>
+            <a href="/images/gallery/photo-23.jpg" data-fancybox="gallery"><img src="/images/gallery/thumbs/23-thumb.jpg" alt="Gallery photo" loading="lazy"></a>
+            <a href="/images/gallery/photo-24.jpg" data-fancybox="gallery"><img src="/images/gallery/thumbs/24-thumb.jpg" alt="Gallery photo" loading="lazy"></a>
+            <a href="/images/gallery/photo-25.jpg" data-fancybox="gallery"><img src="/images/gallery/thumbs/25-thumb.jpg" alt="Gallery photo" loading="lazy"></a>
+            <a href="/images/gallery/photo-26.jpg" data-fancybox="gallery"><img src="/images/gallery/thumbs/26-thumb.jpg" alt="Gallery photo" loading="lazy"></a>
+            <a href="/images/gallery/photo-27.jpg" data-fancybox="gallery"><img src="/images/gallery/thumbs/27-thumb.jpg" alt="Gallery photo" loading="lazy"></a>
+            <a href="/images/gallery/photo-28.jpg" data-fancybox="gallery"><img src="/images/gallery/thumbs/28-thumb.jpg" alt="Gallery photo" loading="lazy"></a>
+            <a href="/images/gallery/photo-29.jpg" data-fancybox="gallery"><img src="/images/gallery/thumbs/29-thumb.jpg" alt="Gallery photo" loading="lazy"></a>
+            <a href="/images/gallery/photo-30.jpg" data-fancybox="gallery"><img src="/images/gallery/thumbs/30-thumb.jpg" alt="Gallery photo" loading="lazy"></a>
+            <a href="/images/gallery/photo-31.jpg" data-fancybox="gallery"><img src="/images/gallery/thumbs/31-thumb.jpg" alt="Gallery photo" loading="lazy"></a>
+        </div>
+    </section>
+    <section class="faq-module">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-title-wrp">
+                    <div class="section-title">Frequently Asked Questions</div>
+                </div>
+            </div>
+            <div class="d-flex gap-60 align-items-start">
+                <div class="col-3">
+                    <div class="img-arch">
+                        <img src="/images/arch.jpg" alt="TVOYA" loading="lazy">
+                        <p class="faq-descr">If you have any other questions or feedback, please <a href="#">contact us <span class="icon-link-arrow-10"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m3 17.37 14-14m0 0H4.75m12.25 0v12.25"></path></svg></span></a> and our dedicated team will be happy to assist you. Your satisfaction is our priority, and we look forward to hearing from you.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="accordion" data-mode="single">
+                        <div class="accordion-item">
+                            <div class="accordion-toggle">
+                                <h3>What services are offered at the beauty institute TVOYA?</h3>
+                                <span class="icon icon-plus">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="none" viewBox="0 0 34 34">
+                                    <g class="Icon Plus">
+                                        <path fill="#000" fill-rule="evenodd" d="M15.14 26.031V7.438h3.188V26.03h-3.187Z" class="ver" clip-rule="evenodd"/>
+                                        <path fill="#000" fill-rule="evenodd" d="M7.438 15.14H26.03v3.188H7.438v-3.187Z" class="hor" clip-rule="evenodd"/>
+                                    </g>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <p>Experience the ultimate in skincare with our personalized facial treatments. Each session is tailored to your skin type and concerns, ensuring a glowing and healthy complexion.</p>
+                                    <p>Valentyna Tuz's love for medical cosmetology has driven her to remarkable achievements in her field. From the very beginning of her journey, during her studies at medical university, Valentyna was a true pioneer in the field of beauty and skin health. It is no wonder that today her name is associated with innovation, quality, and respect in the world of medical cosmetology.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion-toggle">
+                                <h3>What anti-aging programs are available at your beauty institute?</h3>
+                                <span class="icon icon-plus">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="none" viewBox="0 0 34 34">
+                                    <g class="Icon Plus">
+                                        <path fill="#000" fill-rule="evenodd" d="M15.14 26.031V7.438h3.188V26.03h-3.187Z" class="ver" clip-rule="evenodd"/>
+                                        <path fill="#000" fill-rule="evenodd" d="M7.438 15.14H26.03v3.188H7.438v-3.187Z" class="hor" clip-rule="evenodd"/>
+                                    </g>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <p>At the beauty institute TVOYA, we offer a wide range of services to enhance and maintain your beauty and well-being. Our offerings include advanced facial treatments, rejuvenating peels, and comprehensive skincare therapies. We specialize in cutting-edge procedures such as Dermadrop TDA, Geneo, Endospheres Therapy, and Alvi Prague. Additionally, we provide anti-aging programs, body treatments, and solutions for problematic skin using premium products from renowned brands like ZO Skin Health, Biologique Recherche, and DMK. Our team of experts is dedicated to delivering personalized care tailored to your unique needs.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion-toggle">
+                                <h3>What facial and body procedures do you recommend for maintaining skin health?</h3>
+                                <span class="icon icon-plus">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="none" viewBox="0 0 34 34">
+                                    <g class="Icon Plus">
+                                        <path fill="#000" fill-rule="evenodd" d="M15.14 26.031V7.438h3.188V26.03h-3.187Z" class="ver" clip-rule="evenodd"/>
+                                        <path fill="#000" fill-rule="evenodd" d="M7.438 15.14H26.03v3.188H7.438v-3.187Z" class="hor" clip-rule="evenodd"/>
+                                    </g>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <p>At the beauty institute TVOYA, we offer a wide range of services to enhance and maintain your beauty and well-being. Our offerings include advanced facial treatments, rejuvenating peels, and comprehensive skincare therapies. We specialize in cutting-edge procedures such as Dermadrop TDA, Geneo, Endospheres Therapy, and Alvi Prague. Additionally, we provide anti-aging programs, body treatments, and solutions for problematic skin using premium products from renowned brands like ZO Skin Health, Biologique Recherche, and DMK. Our team of experts is dedicated to delivering personalized care tailored to your unique needs.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion-toggle">
+                                <h3>Which product brands are used for treating problematic skin?</h3>
+                                <span class="icon icon-plus">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="none" viewBox="0 0 34 34">
+                                    <g class="Icon Plus">
+                                        <path fill="#000" fill-rule="evenodd" d="M15.14 26.031V7.438h3.188V26.03h-3.187Z" class="ver" clip-rule="evenodd"/>
+                                        <path fill="#000" fill-rule="evenodd" d="M7.438 15.14H26.03v3.188H7.438v-3.187Z" class="hor" clip-rule="evenodd"/>
+                                    </g>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <p>At the beauty institute TVOYA, we offer a wide range of services to enhance and maintain your beauty and well-being. Our offerings include advanced facial treatments, rejuvenating peels, and comprehensive skincare therapies. We specialize in cutting-edge procedures such as Dermadrop TDA, Geneo, Endospheres Therapy, and Alvi Prague. Additionally, we provide anti-aging programs, body treatments, and solutions for problematic skin using premium products from renowned brands like ZO Skin Health, Biologique Recherche, and DMK. Our team of experts is dedicated to delivering personalized care tailored to your unique needs.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion-toggle">
+                                <h3>What benefits does the promotion on the package of 8 procedures offer?</h3>
+                                <span class="icon icon-plus">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="none" viewBox="0 0 34 34">
+                                    <g class="Icon Plus">
+                                        <path fill="#000" fill-rule="evenodd" d="M15.14 26.031V7.438h3.188V26.03h-3.187Z" class="ver" clip-rule="evenodd"/>
+                                        <path fill="#000" fill-rule="evenodd" d="M7.438 15.14H26.03v3.188H7.438v-3.187Z" class="hor" clip-rule="evenodd"/>
+                                    </g>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <p>At the beauty institute TVOYA, we offer a wide range of services to enhance and maintain your beauty and well-being. Our offerings include advanced facial treatments, rejuvenating peels, and comprehensive skincare therapies. We specialize in cutting-edge procedures such as Dermadrop TDA, Geneo, Endospheres Therapy, and Alvi Prague. Additionally, we provide anti-aging programs, body treatments, and solutions for problematic skin using premium products from renowned brands like ZO Skin Health, Biologique Recherche, and DMK. Our team of experts is dedicated to delivering personalized care tailored to your unique needs.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="instagram-feed">
+        <div class="container flex-row">
+            <div class="section-header col-4">
+                <div class="section-title-wrp">
+                    <div class="section-title">Our Instagram</div>
+                </div>
+                <div class="info-block">
+                    <div class="h3"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none" viewBox="0 0 36 36"><path fill="#222" fill-rule="evenodd" d="M24 4.5H12A7.5 7.5 0 0 0 4.5 12v12a7.5 7.5 0 0 0 7.5 7.5h12a7.5 7.5 0 0 0 7.5-7.5V12A7.5 7.5 0 0 0 24 4.5ZM28.875 24A4.89 4.89 0 0 1 24 28.875H12A4.89 4.89 0 0 1 7.125 24V12A4.89 4.89 0 0 1 12 7.125h12A4.89 4.89 0 0 1 28.875 12v12Zm-3.75-11.625a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM18 11.25A6.75 6.75 0 1 0 24.75 18 6.735 6.735 0 0 0 18 11.25ZM13.875 18a4.125 4.125 0 1 0 8.25 0 4.125 4.125 0 0 0-8.25 0Z" clip-rule="evenodd"/></svg></span> Follow us</div>
+                    <a href="#" class="btn btn-stroke btn-md mt-2">
+                        <span class="btn-text">@valentyna_tuz</span><span class="btn-icon icon-link-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m3 17.37 14-14m0 0H4.75m12.25 0v12.25"></path></svg></span>
+                    </a>
+                </div>
+            </div>
+            <div class="gallery">
+                <a href="/images/gallery/photo-01.jpg" data-fancybox="insta-gallery"><img src="/images/gallery/thumbs/01-thumb.jpg" alt="Gallery photo" loading="lazy"></a>
+                <a href="/images/gallery/photo-02.jpg" data-fancybox="insta-gallery"><img src="/images/gallery/thumbs/02-thumb.jpg" alt="Gallery photo" loading="lazy"></a>
+                <a href="/images/gallery/photo-03.jpg" data-fancybox="insta-gallery"><img src="/images/gallery/thumbs/03-thumb.jpg" alt="Gallery photo" loading="lazy"></a>
+                <a href="/images/gallery/photo-04.jpg" data-fancybox="insta-gallery"><img src="/images/gallery/thumbs/04-thumb.jpg" alt="Gallery photo" loading="lazy"></a>
+                <a href="/images/gallery/photo-05.jpg" data-fancybox="insta-gallery"><img src="/images/gallery/thumbs/05-thumb.jpg" alt="Gallery photo" loading="lazy"></a>
+                <a href="/images/gallery/photo-06.jpg" data-fancybox="insta-gallery"><img src="/images/gallery/thumbs/06-thumb.jpg" alt="Gallery photo" loading="lazy"></a>
+                <a href="/images/gallery/photo-07.jpg" data-fancybox="insta-gallery"><img src="/images/gallery/thumbs/07-thumb.jpg" alt="Gallery photo" loading="lazy"></a>
+                <a href="/images/gallery/photo-08.jpg" data-fancybox="insta-gallery"><img src="/images/gallery/thumbs/08-thumb.jpg" alt="Gallery photo" loading="lazy"></a>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-wrp d-flex">
+                <div class="col legal-wrp">
+                    <a href="#" class="footer-logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="210" height="62" fill="none" viewBox="0 0 210 62">
+                            <path fill="#222" d="M87.597 54.337c-2.914 0-4.274-1.39-4.274-3.283v-.089h1.065v.193c0 1.42.887 2.188 3.21 2.188 1.982 0 2.884-.547 2.884-1.67 0-1.11-.666-1.509-2.115-1.805l-2.1-.399c-1.613-.31-2.9-.99-2.9-2.632 0-1.345 1.154-2.706 3.994-2.706 2.795 0 4.038 1.48 4.038 3.283v.089h-1.065v-.178c0-1.434-.888-2.203-3.047-2.203-1.968 0-2.855.562-2.855 1.641 0 1.124.65 1.464 2.115 1.775l2.086.414c1.775.34 2.914 1.094 2.914 2.632 0 1.419-1.198 2.75-3.95 2.75Zm8.804 0c-2.337 0-3.86-1.583-3.86-3.8 0-2.218 1.523-3.8 3.86-3.8 2.041 0 3.639 1.212 3.639 2.972v.118h-1.036v-.089c0-1.3-.946-2.04-2.618-2.04-1.952 0-2.795 1.05-2.795 2.839s.843 2.839 2.795 2.839c1.672 0 2.618-.74 2.618-2.04v-.09h1.036v.119c0 1.76-1.598 2.972-3.639 2.972Zm6.097-.148h-1.051v-9.907h1.051v4.835h.074c.236-1.227 1.183-2.38 3.047-2.38 2.041 0 3.062 1.36 3.062 3.208v4.244h-1.05v-4.11c0-1.671-.784-2.381-2.426-2.381-1.953 0-2.707 1.242-2.707 3.06v3.43Zm13.231-8.28h-1.006v-1.745h1.006v1.745Zm-2.441 0h-1.006v-1.745h1.006v1.745Zm.71 8.428c-2.382 0-3.964-1.583-3.964-3.8 0-2.218 1.582-3.8 3.964-3.8 2.396 0 3.979 1.582 3.979 3.8s-1.583 3.8-3.979 3.8Zm0-.947c2.012 0 2.944-1.079 2.944-2.853 0-1.76-.932-2.854-2.944-2.854s-2.929 1.094-2.929 2.854c0 1.774.917 2.853 2.929 2.853Zm6.427.799h-1.051v-7.304h.947v2.291h.074c.252-1.242 1.287-2.44 3.107-2.44 2.056 0 3.076 1.465 3.076 3.195v4.258h-1.05v-4.11c0-1.509-.725-2.381-2.396-2.381-1.775 0-2.707 1.08-2.707 2.957v3.534Zm8.913 0h-1.051v-9.907h1.051v4.835h.074c.236-1.227 1.183-2.38 3.047-2.38 2.041 0 3.062 1.36 3.062 3.208v4.244h-1.05v-4.11c0-1.671-.784-2.381-2.426-2.381-1.953 0-2.707 1.242-2.707 3.06v3.43Zm11.396.148c-2.352 0-3.846-1.479-3.846-3.8 0-2.218 1.48-3.8 3.832-3.8 2.145 0 3.668 1.242 3.668 3.415 0 .266-.029.488-.074.68h-6.434c.059 1.642.902 2.632 2.84 2.632 1.716 0 2.514-.636 2.514-1.7v-.104h1.051v.104c0 1.523-1.509 2.573-3.551 2.573Zm-.029-6.728c-1.894 0-2.752.976-2.825 2.573h5.517v-.222c0-1.538-.976-2.35-2.692-2.35Zm6.126-1.656h-1.05v-1.67h1.05v1.67Zm0 8.236h-1.05v-7.304h1.05v7.304Zm6.249 0h-1.583c-1.449 0-2.381-.606-2.381-2.322v-4.08h-1.302v-.902h1.302V45.14h1.065v1.745h2.899v.902h-2.899v4.14c0 1.02.503 1.3 1.568 1.3h1.331v.962Zm4.362.148c-2.249 0-3.55-.902-3.55-2.588v-.03h1.05v.09c0 1.227.725 1.655 2.515 1.655 1.642 0 2.204-.384 2.204-1.227 0-.769-.459-1.02-1.672-1.212l-1.952-.281c-1.332-.178-2.175-.695-2.175-1.908 0-1.286 1.228-2.1 3.24-2.1 2.1 0 3.461.888 3.461 2.603v.03h-1.05v-.074c0-1.094-.577-1.686-2.441-1.686-1.538 0-2.174.37-2.174 1.242 0 .754.384 1.02 1.597 1.198l1.79.251c1.568.222 2.411.754 2.411 1.937 0 1.375-1.361 2.1-3.254 2.1Zm5.684-8.384h-1.05v-1.67h1.05v1.67Zm0 8.236h-1.05v-7.304h1.05v7.304Zm2.817 0h-1.05v-7.304h.947v2.291h.073c.252-1.242 1.287-2.44 3.107-2.44 2.056 0 3.077 1.465 3.077 3.195v4.258h-1.051v-4.11c0-1.509-.724-2.381-2.396-2.381-1.775 0-2.707 1.08-2.707 2.957v3.534Zm11.073.148c-2.249 0-3.55-.902-3.55-2.588v-.03h1.05v.09c0 1.227.725 1.655 2.515 1.655 1.641 0 2.204-.384 2.204-1.227 0-.769-.459-1.02-1.672-1.212l-1.953-.281c-1.331-.178-2.174-.695-2.174-1.908 0-1.286 1.228-2.1 3.24-2.1 2.1 0 3.461.888 3.461 2.603v.03h-1.05v-.074c0-1.094-.577-1.686-2.441-1.686-1.538 0-2.175.37-2.175 1.242 0 .754.385 1.02 1.598 1.198l1.79.251c1.568.222 2.411.754 2.411 1.937 0 1.375-1.361 2.1-3.254 2.1Zm9.116-.148h-1.583c-1.45 0-2.381-.606-2.381-2.322v-4.08h-1.302v-.902h1.302V45.14h1.065v1.745h2.899v.902h-2.899v4.14c0 1.02.503 1.3 1.568 1.3h1.331v.962Zm2.202-8.236h-1.05v-1.67h1.05v1.67Zm0 8.236h-1.05v-7.304h1.05v7.304Zm6.249 0H193c-1.45 0-2.382-.606-2.382-2.322v-4.08h-1.301v-.902h1.301V45.14h1.065v1.745h2.9v.902h-2.9v4.14c0 1.02.503 1.3 1.568 1.3h1.332v.962Zm4.213.148c-2.085 0-3.106-1.45-3.106-3.18v-4.272h1.05v4.11c0 1.523.74 2.395 2.426 2.395 1.79 0 2.722-1.079 2.722-2.957v-3.548h1.05v7.304h-.947v-2.277h-.073c-.252 1.242-1.302 2.425-3.122 2.425Zm10.391-.148h-1.583c-1.449 0-2.381-.606-2.381-2.322v-4.08h-1.302v-.902h1.302V45.14h1.065v1.745h2.899v.902h-2.899v4.14c0 1.02.503 1.3 1.568 1.3h1.331v.962ZM85.832 36.496V10.967h-.713c-7.555 0-9.094 2.602-9.094 2.602l1.121-3.424h20.726l1.122 3.424s-1.492-2.602-9.095-2.602h-.674v25.539h-3.403l.01-.01Zm30.201 0c-.133.23-.513.21-.637 0l-13.285-26.36h3.706s-1.007 2.046.751 5.566l8.077 16.232 10.853-21.799h3.82l-13.285 26.361Zm30.4-26.916c9.599 0 14.398 6.858 14.398 13.745s-4.799 13.745-14.398 13.745c-9.598 0-14.425-6.887-14.425-13.745S136.807 9.58 146.433 9.58Zm-1.9 25.759c8.705 0 13.694-7.556 13.694-14.195 0-5.203-3.089-9.842-9.893-9.842-8.705 0-13.732 7.518-13.732 14.166 0 5.203 3.089 9.87 9.931 9.87Zm27.169-10.522-9.74-14.672h4.114l8.61 12.884s7.498-9.871 7.812-10.292c.275-.373.504-1.024.456-1.55-.047-.526-.589-1.052-.589-1.052h3.43l-10.234 13.946c-.162.21-.238.468-.238.736v11.68h-3.402V25.505a1.25 1.25 0 0 0-.209-.689h-.01ZM210 36.496l-13.285-26.36c-.105-.22-.523-.22-.637 0l-13.285 26.36h3.554s-.561-.593-.561-1.722c0-1.013.475-1.97 1.34-3.701l8.154-16.232 5.93 11.746c-2.072-1.1-5.693-2.038-10.359.698 0 0 5.598-2.956 11.784 2.123l3.573 7.079h3.783l.009.01ZM56.525 20.144a29.192 29.192 0 0 1 1.416 9.03 29.153 29.153 0 0 1-6.253 18.096A29.222 29.222 0 0 1 41.5 55.477a.333.333 0 0 1-.437-.163.328.328 0 0 1 .152-.42 28.377 28.377 0 0 0 9.646-7.624 28.538 28.538 0 0 0 6.443-18.097c0-2.85-.418-5.605-1.198-8.197L38.593 56.003l-.418.832-2.556 5.108s-.048.057-.086.057h-1.226s-.066-.02-.085-.057l-1.9-3.807-.97-1.952-4.457-8.904-.694-1.378v-2.324c0-.067.095-.086.124-.029l1.872 3.73 3.801 7.614 19.396-38.795 1.283-2.554a26.643 26.643 0 0 0-1.122-1.597 28.07 28.07 0 0 0-3.544-3.903 28.627 28.627 0 0 0-4.258-3.214 29.085 29.085 0 0 0-5.16-2.496A28.13 28.13 0 0 0 28.975.65a28.33 28.33 0 0 0-5.702.574c-.39.086-.78.172-1.169.268a.325.325 0 0 1-.161-.631 26.93 26.93 0 0 1 2.319-.478c.408-.067.817-.125 1.225-.173 1.15-.143 2.31-.21 3.498-.21 3.278 0 6.433.545 9.37 1.56 1.055.353 2.08.774 3.07 1.252.19.086.37.182.55.268a29.365 29.365 0 0 1 8.021 5.997c.846.9 1.635 1.846 2.366 2.85.219.307.438.613.646.928l.029-.057.437-.87h7.156l-4.096 8.197-.01.019Z"/>
+                            <path fill="#222" d="M40.54 8.312c.048.153-.152.249-.247.124a9.25 9.25 0 0 0-6.205-3.893c-.095-.01-.18-.028-.276-.038l-.209-.029h-.038a98.678 98.678 0 0 0-9.303-.688v43.386a.096.096 0 0 1-.096.096H18.58a.096.096 0 0 1-.095-.096V3.788c-.884.019-1.759.057-2.614.095l-1.482.086a84.393 84.393 0 0 0-5.198.488c-.305.02-.6.058-.894.115h-.028a9.261 9.261 0 0 0-1.255.316A9.238 9.238 0 0 0 2.3 8.398c-.094.134-.294.029-.246-.124l.921-2.812.865-2.65h34.915l1.786 5.49v.01Z"/>
+                            <path fill="#222" d="M17.106 27.423c0 .067-.095.086-.124.028L9.313 12.11a.113.113 0 0 1 .105-.162h7.032c.123 0 .162.172.047.22-1.026.44-3.839 2.515.609 12.922v2.334Z"/>
+                            <path fill="#222" d="M28.975 58.002a.322.322 0 0 1-.323.325 28.835 28.835 0 0 1-4.39-.383 28.508 28.508 0 0 1-5.778-1.587A29.098 29.098 0 0 1 6.263 47.27 29.103 29.103 0 0 1 0 29.173c0-3.06.475-6.016 1.34-8.79.18-.574.38-1.148.599-1.712a28.888 28.888 0 0 1 3.658-6.724 29.568 29.568 0 0 1 3.117-3.625c.932-.919 1.93-1.78 2.975-2.564a.317.317 0 0 1 .447.067.322.322 0 0 1-.067.45 27.958 27.958 0 0 0-3.06 2.65c-.295.286-.58.583-.855.889a28.61 28.61 0 0 0-5.787 9.508c-.143.4-.276.793-.41 1.204a28.557 28.557 0 0 0-1.32 8.647A28.485 28.485 0 0 0 7.08 47.27a28.478 28.478 0 0 0 11.404 8.398 27.809 27.809 0 0 0 5.777 1.626c1.436.24 2.899.373 4.4.392.171 0 .314.144.314.316Z"/>
+                        </svg>
+                    </a>
+                    <div class="legal-info">
+                        <p class="decsription">Esthetician cosmetologist in Munich</p>
+                        <p class="copyright">Copyright 2024 © tvoya.de</p>
+                        <div class="social-media">
+                            <a href="https://www.facebook.com/" target="_blank">
+                                <span class="icon icon-facebook">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                        <path fill="#222" d="M21 12.055C21 7.053 16.972 3 12 3s-9 4.053-9 9.055c0 4.52 3.291 8.265 7.594 8.945v-6.328H8.307v-2.617h2.287V10.06c0-2.27 1.343-3.523 3.4-3.523.984 0 2.014.177 2.014.177V8.94h-1.135c-1.118 0-1.467.698-1.467 1.414v1.7h2.496l-.399 2.617h-2.097V21C17.71 20.32 21 16.574 21 12.055Z"/>
+                                    </svg>
+                                </span>
+                            </a>
+                            <a href="https://www.instagram.com/" target="_blank">
+                                <span class="icon icon-instagram">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                        <path fill="#222" d="M12.002 7.385A4.607 4.607 0 0 0 7.388 12a4.607 4.607 0 0 0 4.614 4.615A4.607 4.607 0 0 0 16.616 12a4.607 4.607 0 0 0-4.614-4.615Zm0 7.615c-1.65 0-3-1.345-3-3s1.346-3 3-3 3 1.345 3 3-1.35 3-3 3Zm5.879-7.804c0 .599-.482 1.077-1.076 1.077a1.076 1.076 0 1 1 1.076-1.076Zm3.056 1.093c-.069-1.442-.398-2.72-1.454-3.772-1.052-1.052-2.329-1.381-3.77-1.454-1.486-.084-5.94-.084-7.425 0-1.438.069-2.715.398-3.771 1.45-1.056 1.053-1.381 2.33-1.454 3.772-.084 1.486-.084 5.94 0 7.426.069 1.442.398 2.72 1.454 3.772 1.056 1.052 2.329 1.381 3.77 1.454 1.486.084 5.94.084 7.425 0 1.442-.069 2.719-.398 3.771-1.454 1.052-1.053 1.381-2.33 1.454-3.772.084-1.486.084-5.936 0-7.422Zm-1.92 9.017a3.037 3.037 0 0 1-1.71 1.71c-1.185.47-3.996.362-5.305.362-1.31 0-4.124.105-5.305-.361a3.037 3.037 0 0 1-1.71-1.711c-.47-1.185-.362-3.997-.362-5.306 0-1.31-.104-4.125.362-5.306a3.037 3.037 0 0 1 1.71-1.71c1.185-.47 3.996-.362 5.305-.362 1.31 0 4.124-.105 5.305.361.787.313 1.393.92 1.71 1.711.47 1.185.362 3.997.362 5.306 0 1.31.108 4.125-.362 5.306Z"/>
+                                    </svg>
+                                </span>
+                            </a>
+                            <a href="https://www.youtube.com/" target="_blank">
+                                <span class="icon icon-youtube">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                        <g clip-path="url(#a)"><path fill="#222" fill-rule="evenodd" d="M12 5c.77 0 1.559.02 2.324.052l.903.043.865.052.81.055.74.057a3.42 3.42 0 0 1 3.145 3.08l.036.383.067.82c.063.848.11 1.773.11 2.658s-.047 1.81-.11 2.659l-.067.819-.036.382a3.42 3.42 0 0 1-3.146 3.08l-.738.058-.81.055-.866.052-.903.043c-.774.033-1.55.05-2.324.052a55.922 55.922 0 0 1-2.324-.052l-.903-.043-.865-.052-.81-.055-.74-.057a3.42 3.42 0 0 1-3.145-3.08l-.036-.383-.067-.82A36.904 36.904 0 0 1 3 12.2c0-.885.047-1.81.11-2.659l.067-.819.036-.382a3.42 3.42 0 0 1 3.144-3.08l.739-.058.81-.055.866-.052.903-.043C10.45 5.02 11.225 5.002 12 5Zm-1.8 5.018v4.364c0 .416.45.675.81.469l3.78-2.183a.539.539 0 0 0 0-.936L11.01 9.55a.54.54 0 0 0-.81.468Z" clip-rule="evenodd"/></g>
+                                        <defs><clipPath id="a"><path fill="#fff" d="M0 0h24v24H0z"/></clipPath></defs>
+                                    </svg>                                      
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col nav-wrp">
+                    <div class="h3">Pages</div>
+                    <nav>
+                        <ul role="list" class="footer_menu_list">
+                            <li><a href="#" class="menu_link active">Home</a></li>
+                            <li><a href="#" class="menu_link">Services</a>
+                                <!-- <ul role="list" class="submenu">
+                                    <li><a href="#" class="submenu_link">Gesichtsbehandlungen</a></li>
+                                    <li><a href="#" class="submenu_link">Dermadrop TDA System</a></li>
+                                    <li><a href="#" class="submenu_link">Endospheres Therapy</a></li>
+                                    <li><a href="#" class="submenu_link">Biologique Recherche</a></li>
+                                    <li><a href="#" class="submenu_link">ZO Obagi</a></li>
+                                    <li><a href="#" class="submenu_link">DMK</a></li>
+                                </ul> --></li>
+                            <li><a href="#" class="menu_link">Blog</a></li>
+                            <li><a href="#" class="menu_link">News</a></li>
+                            <li><a href="#" class="menu_link">About Us</a>
+                                <!-- <ul role="list" class="submenu">
+                                    <li><a href="#" class="submenu_link">Our Team</a></li>
+                                    <li><a href="#" class="submenu_link">Founder</a></li>
+                                </ul> --></li>
+                            <li><a href="#" class="menu_link">Documents</a>
+                                <!-- <ul role="list" class="submenu">
+                                    <li><a href="#" class="submenu_link">Impressum</a></li>
+                                    <li><a href="#" class="submenu_link">Certificates</a></li>
+                                </ul> --></li>
+                            <li><a href="#" class="menu_link">Prices</a></li>
+                            <li><a href="#" class="menu_link">Portfolio</a></li>
+                            <li><a href="#" class="menu_link">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col contact-wrp">
+                    <div class="h3">Contact us</div>
+                    <div class="contact-block d-flex flex-column">
+                        <div class="d-flex">
+                            <div class="c-title">Address:</div>
+                            <div class="c-value">Schellingstraße 109 a, 80798, München</div>
+                        </div>
+                        <div class="d-flex">
+                            <div class="c-title">Phone:</div>
+                            <div class="c-value">+49 176-748-744-07</div>
+                        </div>
+                        <div class="d-flex">
+                            <div class="c-title">Working hours:</div>
+                            <div class="c-value">9:00 - 18:00<br>Monday - Friday</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="reviewModal" class="modal fade">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+                <!-- The full text of the reviews will be displayed here -->
+            </div>
+        </div>
+    </div>
+
+    <link href="/css/swiper-bundle.min.css" rel="stylesheet" type="text/css"/>
+    <script src="/js/swiper-bundle.min.js" type="text/javascript"></script>
+    <link href="/css/fancybox.css" rel="stylesheet" type="text/css"/>
+    <script src="/js/fancybox.umd.js" type="text/javascript"></script>
+    <script src="/js/jquery.min.js" type="text/javascript"></script>
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-5OjdcEU4Lqi1A36O39M7oPGL1bgIR60&libraries=places,geometry"></script>
+    <script src="/js/main.js" type="module"></script>
+    </body>
+</html>

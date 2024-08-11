@@ -1,19 +1,6 @@
 'use strict';
 
 $(function () {
-  /** Page scroll event handler **/
-  // const toggleScrolledClass = () => {
-  //   $('body').toggleClass('scrolled', window.pageYOffset > 0);
-  // };
-  // toggleScrolledClass();
-  // $(window).on('scroll', toggleScrolledClass);
-
-
-  // window.addEventListener('scroll', () => {
-  //   document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
-  // }, false);
-
-
   /** Links default action **/
   $('a[href="#"]').on("click", function (event) {
     event.preventDefault();
@@ -32,11 +19,17 @@ $(function () {
     if (!isOpen) {
       dropdownParent.addClass("open");
       dropdownBody.addClass("open");
+      $('html').addClass('menu-open');
+    } else {
+      $('html').removeClass('menu-open');
     }
   });
 
   $(document).on("click", function () {
     $(".dropdown_body, .dropdown").removeClass("open");
+    setTimeout(function() {
+      $('html').removeClass('menu-open');
+    }, 500)
   });
 
   $(".dropdown_body").on("click", function (e) {
@@ -45,12 +38,12 @@ $(function () {
 
 
   /** Image Slider (About us) **/
-  const swiper = new Swiper('.about-us-module .swiper-container', {
+  const swiperAboutUs = new Swiper('.about-us-module .swiper-container', {
     effect: 'fade',
     fadeEffect: {
       crossFade: true,
     },
-    speed: 800,
+    speed: 500,
     // autoplay: {
     //   delay: 3000,
     // },
@@ -64,119 +57,192 @@ $(function () {
       slideChangeTransitionStart: function () {
         var swiper = this;
         var currentCaption = $(swiper.slides[swiper.activeIndex]).attr("data-caption");
-        var $slideTitle = $(".slide-title");
-        var index = swiper.realIndex;
-        // console.log(index);
+        var $slideTitle = $(".about-us-module .slide-title");
+        var realIndex = swiper.realIndex;
+        console.log("slide_realIndex: ", realIndex);
         $slideTitle.find('span').text(currentCaption);
         $(".about-us-module .benefits_toggle .toggle_item").removeClass("active");
-        $(".about-us-module .benefits_toggle .toggle_item[data-index='" + index + "']").addClass("active");
+        $(".about-us-module .benefits_toggle .toggle_item[data-index='" + realIndex + "']").addClass("active");
+        // $(swiper.slides[swiper.activeIndex]).attr("data-index", realIndex);
       },
     }
   });
 
-  // Update slide on toggle item click
+  // Update [About us] slide on toggle item click
   $('.about-us-module .benefits_toggle .toggle_item').on('click', function () {
     const index = $(this).data('index');
-    swiper.slideTo(index);
+    console.log("toggle_index: ", index);
+    swiperAboutUs.slideToLoop(index);
     $(".about-us-module .benefits_toggle .toggle_item").removeClass("active");
     $(this).addClass("active");
   });
 
 
+  
+  
 
   /** Accordion **/
-  $('.accordion').each(function () {
-    var $accordion = $(this);
-    var mode = $accordion.data('mode'); // Get mode from data attribute
+  function initAccordion() {
+    $('.accordion').each(function () {
+      var $accordion = $(this);
+      var mode = $accordion.data('mode'); // Get mode from data attribute
 
-    $accordion.on('click', '.accordion-toggle', function () {
-      var $item = $(this).closest('.accordion-item');
-      var $collapse = $item.find('.accordion-collapse');
-      var isOpen = $collapse.hasClass('show');
+      $accordion.off('click', '.accordion-toggle').on('click', '.accordion-toggle', function () {
+        var $item = $(this).closest('.accordion-item');
+        var $collapse = $item.find('.accordion-collapse');
+        var isOpen = $collapse.hasClass('show');
 
-      if ($accordion.find('.collapsing').length > 0) {
-        // Do not process click if any item is in the process of animation
-        return;
-      }
-
-      if (mode === 'single') {
-        // Close all items except the current one
-        if (!isOpen) {
-          $accordion.find('.accordion-collapse.show').each(function () {
-            var $this = $(this);
-            $this.closest('.accordion-item').removeClass('show'); // Remove 'show' class from the parent item
-            $this.css('height', $this[0].scrollHeight + 'px');
-            $this[0].offsetHeight; // force reflow
-            $this.addClass('collapsing').removeClass('collapse show').css('height', '0px');
-            $this.one('transitionend', function () {
-              $this.removeClass('collapsing').addClass('collapse').css('height', '');
-            });
-          });
+        if ($accordion.find('.collapsing').length > 0) {
+          // Do not process click if any item is in the process of animation
+          return;
         }
-      } else if (mode === 'always-open') {
-        // Ensure at least one item is always open
-        if (isOpen) {
-          return; // Do nothing if already open
-        }
-        $accordion.find('.accordion-collapse.show').each(function () {
-          var $this = $(this);
-          if (!$this.hasClass('collapsing')) {
-            $this.closest('.accordion-item').removeClass('show'); // Remove 'show' class from the parent item
-            $this.css('height', $this[0].scrollHeight + 'px');
-            $this[0].offsetHeight; // force reflow
-            $this.addClass('collapsing').removeClass('collapse show').css('height', '0px');
-            $this.one('transitionend', function () {
-              $this.removeClass('collapsing').addClass('collapse').css('height', '');
+
+        if (mode === 'single') {
+          // Close all items except the current one
+          if (!isOpen) {
+            $accordion.find('.accordion-collapse.show').each(function () {
+              var $this = $(this);
+              $this.closest('.accordion-item').removeClass('show'); // Remove 'show' class from the parent item
+              $this.css('height', $this[0].scrollHeight + 'px');
+              $this[0].offsetHeight; // force reflow
+              $this.addClass('collapsing').removeClass('collapse show').css('height', '0px');
+              $this.one('transitionend', function () {
+                $this.removeClass('collapsing').addClass('collapse').css('height', '');
+              });
             });
           }
-        });
-      }
+        } else if (mode === 'always-open') {
+          // Ensure at least one item is always open
+          if (isOpen) {
+            return; // Do nothing if already open
+          }
+          $accordion.find('.accordion-collapse.show').each(function () {
+            var $this = $(this);
+            if (!$this.hasClass('collapsing')) {
+              $this.closest('.accordion-item').removeClass('show'); // Remove 'show' class from the parent item
+              $this.css('height', $this[0].scrollHeight + 'px');
+              $this[0].offsetHeight; // force reflow
+              $this.addClass('collapsing').removeClass('collapse show').css('height', '0px');
+              $this.one('transitionend', function () {
+                $this.removeClass('collapsing').addClass('collapse').css('height', '');
+              });
+            }
+          });
+        }
 
-      // Animation for opening/closing the current item
-      if (isOpen) {
-        // Collapse animation
-        $item.removeClass('show'); // Remove 'show' class from the parent item
-        $collapse.css('height', $collapse[0].scrollHeight + 'px');
-        $collapse[0].offsetHeight; // force reflow
-        $collapse.addClass('collapsing').removeClass('collapse show').css('height', '0px');
-        $collapse.one('transitionend', function () {
-          $collapse.removeClass('collapsing').addClass('collapse').css('height', '');
-        });
-      } else {
-        // Expand animation
-        $item.addClass('show'); // Add 'show' class to the parent item
-        $collapse.removeClass('collapse').addClass('collapsing').css('height', '0px');
-        $collapse[0].offsetHeight; // force reflow
-        $collapse.css('height', $collapse[0].scrollHeight + 'px');
-        $collapse.one('transitionend', function () {
-          $collapse.removeClass('collapsing').addClass('collapse show').css('height', '');
-        });
-      }
+        // Animation for opening/closing the current item
+        if (isOpen) {
+          // Collapse animation
+          $item.removeClass('show'); // Remove 'show' class from the parent item
+          $collapse.css('height', $collapse[0].scrollHeight + 'px');
+          $collapse[0].offsetHeight; // force reflow
+          $collapse.addClass('collapsing').removeClass('collapse show').css('height', '0px');
+          $collapse.one('transitionend', function () {
+            $collapse.removeClass('collapsing').addClass('collapse').css('height', '');
+          });
+        } else {
+          // Expand animation
+          $item.addClass('show'); // Add 'show' class to the parent item
+          $collapse.removeClass('collapse').addClass('collapsing').css('height', '0px');
+          $collapse[0].offsetHeight; // force reflow
+          $collapse.css('height', $collapse[0].scrollHeight + 'px');
+          $collapse.one('transitionend', function () {
+            $collapse.removeClass('collapsing').addClass('collapse show').css('height', '');
+          });
+        }
+      });
+    });
+  }
 
-      // Update image and price in #service-img-wrp
-      var image = $item.data('image');
-      var price = $item.data('price');
-      var $currentImg = $('#service-img-wrp .current-img');
-      var $nextImg = $('#service-img-wrp .next-img');
-      var $nextPrice = $('#service-img-wrp .service-price span');
-
-      // Set the next image
-      $nextImg.css('background-image', 'url(' + image + ')');
-
-      // Fade in the next image
-      $nextImg.addClass('fade-in').one('transitionend', function () {
-        // Once the fade-in transition is complete, swap classes
-        $currentImg.css('background-image', 'url(' + image + ')');
-        $currentImg.removeClass('current-img').addClass('next-img');
-        $nextImg.removeClass('next-img fade-in').addClass('current-img');
+  /** Adaptive Styles **/
+  function checkWindowSize() {
+    if ($(window).width() <= 479) {
+      $('ul.full_menu_list').addClass('accordion');
+      $('ul.full_menu_list li.parent_menu').addClass('accordion-item');
+      
+      // Adding class .accordion-toggle
+      $('ul.full_menu_list li.parent_menu a.menu_link').addClass('accordion-toggle');
+      
+      // Wrapping ul.submenu in div with .accordion-collapse.collapse classes
+      $('ul.full_menu_list li.parent_menu').each(function() {
+        var $submenu = $(this).find('ul.submenu');
+        if ($submenu.length && !$submenu.parent().is('div.accordion-collapse')) {
+          $submenu.wrap('<div class="accordion-collapse collapse"></div>');
+        }
       });
 
-      $nextPrice.fadeOut(250, function () {
-        $(this).text(price).fadeIn(250);
+      // Add 'show' class to active items
+      $('ul.full_menu_list li.parent_menu').each(function() {
+        var $item = $(this);
+        var $collapse = $item.find('.accordion-collapse');
+        if ($item.find('a.submenu_link.active').length) {
+          $item.addClass('show');
+          $collapse.addClass('show');
+        }
       });
-    });  
+
+      // Module Reviews order block
+      var reviewsModule = $('.reviews-module');
+      var swiperNav = reviewsModule.find('.navigation-wrp');
+      var orderBlock = reviewsModule.find('.d-flex.gap-50');
+      var revWidget = reviewsModule.find('.google-reviews-widget');
+      var mobShow = reviewsModule.find('.mob-show');
+
+      revWidget.appendTo(mobShow);
+      swiperNav.prependTo(mobShow);
+
+
+    } else {
+      $('ul.full_menu_list').removeClass('accordion');
+      $('ul.full_menu_list li.parent_menu').removeClass('accordion-item');
+      $('ul.full_menu_list li.parent_menu a.menu_link').removeClass('accordion-toggle');
+
+      // Remove the wrapper div .accordion-collapse.collapse
+      $('ul.full_menu_list li.parent_menu > div.accordion-collapse.collapse').each(function() {
+        $(this).children('ul.submenu').unwrap();
+      });
+
+      // Remove 'show' class from all items
+      $('ul.full_menu_list li.parent_menu').removeClass('show');
+      $('ul.full_menu_list li.parent_menu .accordion-collapse').removeClass('show');
+    }
+  }
+
+  // Initialize accordion and check window size on document ready
+  checkWindowSize();
+  initAccordion();
+
+  // Reinitialize accordion and check window size on window resize
+  $(window).resize(function() {
+    checkWindowSize();
+    initAccordion();
   });
 
+
+
+  /** Image Slider (Services) **/
+  const swiperServices = new Swiper('.services-module .swiper-container', {
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true,
+    },
+    speed: 500,
+    allowTouchMove: false,
+    on: {
+      slideChangeTransitionStart: function () {
+        var swiper = this;
+        var currentPrice = $(swiper.slides[swiper.activeIndex]).attr("data-price");
+        var $servicePrice = $(".service-price");
+        $servicePrice.find('span').text(currentPrice);
+      },
+    }
+  });
+
+  // Update [Services] slide on toggle accordion item
+  $('.services-module .accordion-item').on('click', function () {
+    const index = $(this).data('index');
+    swiperServices.slideTo(index);
+  });
 
   
   /** Google Reviews Widget **/
@@ -197,6 +263,9 @@ $(function () {
       spaceBetween: 30,
       speed: 400,
       grabCursor: true,
+      // lazy: {
+      //     loadPrevNext: true,
+      // },
       pagination: {
         el: $(element).closest('.container').find('.sw-pagination')[0],
         type: 'bullets',
@@ -283,26 +352,6 @@ $(function () {
 
   
 }); // document.ready END
-
-
-
-/** Page scroll event handler **/
-// function handleScroll() {
-//   if (window.pageYOffset > 0) {
-//     document.body.classList.add('scrolled');
-//   } else {
-//     document.body.classList.remove('scrolled');
-//   }
-// }
-
-// window.addEventListener('DOMContentLoaded', () => {
-//   if (window.pageYOffset > 0)
-//     document.body.classList.add('scrolled');
-//   else
-//     document.body.classList.remove('scrolled');
-
-//   window.addEventListener('scroll', handleScroll);
-// });
 
 
 
@@ -420,62 +469,3 @@ async function createMap() {
 }
 
 createMap();
-
-// async function initMap() {
-//   var location = { lat: 48.1504, lng: 11.5806 }; // Координаты Мюнхена
-
-//   var map = new google.maps.Map($('#map')[0], { // Используем jQuery для получения элемента
-//     zoom: 13,
-//     center: location,
-//     disableDefaultUI: true,
-//     styles: [
-//       {
-//         "featureType": "all",
-//         "elementType": "all",
-//         "stylers": [
-//           {
-//             "saturation": "-100"
-//           }
-//         ]
-//       },
-//       {
-//         "featureType": "all",
-//         "elementType": "geometry",
-//         "stylers": [
-//           {
-//             "gamma": "1.50"
-//           },
-//           {
-//             "lightness": "31"
-//           }
-//         ]
-//       },
-//       {
-//         "featureType": "all",
-//         "elementType": "labels",
-//         "stylers": [
-//           {
-//             "lightness": "18"
-//           }
-//         ]
-//       },
-//       {
-//         "featureType": "all",
-//         "elementType": "labels.icon",
-//         "stylers": [
-//           {
-//             "visibility": "off"
-//           }
-//         ]
-//       }
-//     ]
-//   });
-
-//   var marker = new google.maps.Marker({
-//     position: location,
-//     map: map,
-//     title: 'Ваш адрес'
-//   });
-// }
-
-// initMap();
